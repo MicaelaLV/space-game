@@ -1,0 +1,33 @@
+.main-container {
+  background-color: #2E154C;
+  color: white;
+  width: 100vw;
+  height: 100vh;
+}
+
+.game-container {
+  height: 70vh;
+  width: 80vw;
+  margin-right: 20 auto;
+}
+
+.a {
+  height: 100px;
+  width: 100px;
+  border-radius: 50;
+  background-color:#F72D99;
+}
+
+.b {
+  height: 100px;
+  width: 100px;
+  border-radius: 50;
+  background-color:#00AAFF;
+}
+
+.c {
+  height: 100px;
+  width: 100px;
+  border-radius: 50;
+  background-color:#46FF28;
+}
