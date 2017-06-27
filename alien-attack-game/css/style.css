@@ -5,13 +5,26 @@ font-family: 'Kanit', sans-serif;
 font-family: 'Work Sans', sans-serif;
 */
 
+*:before *:after {
+  box-sizing: border-box;
+}
 
+
+/* ---------- Body container */
 .main-container {
   background-color: #2E154C;
   color: white;
   width: 100vw;
   height: 100vh;
+}
 
+/* ----------- Logo stylings */
+.landing-logo {
+  margin: 0 auto;
+  width: 100vw;
+  position: absolute;
+  top: 20%;
+  text-align: center;
 }
 
 .logo {
@@ -22,7 +35,16 @@ font-family: 'Work Sans', sans-serif;
   font-size: 50px;
 }
 
+/* ------------ Message Section */
+#message-section{
+  position: absolute;
+  top: 30%;
+  height: 500px;
+  width: 100vw;
+  background-color: black;
+}
 
+/* ----------- Bugs Controls */
 div#container {
   border: 2px solid white;
   background-color: #0F2D62;
@@ -30,6 +52,7 @@ div#container {
   width: 90vw;
   margin-right: 20 auto;
   padding: 20px;
+  display:none;
 }
 
 .a {
@@ -37,28 +60,54 @@ div#container {
   width: 400px;
   position: absolute;
   background: url('../img/alienbug.jpg')no-repeat center;
+  display: none;
 }
 
-
-
-.kill {
-  height: 400px;
-  width: 400px;
+.killed {
+  height: 200px;
+  width: 200px;
   position: absolute;
   background-color: red;
 }
 
-/*.b {
-  height: 100px;
-  width: 100px;
-  position: fixed;
-
-  background-color:#00AAFF;
+/* ----------- Starting command */
+#js-starting-command {
+  position: absolute;
+  top: 88%;
+  height: 50px;
+  width: 100vw;
+  background-color: black;
+  color: #F72D99;
 }
 
-.c {
-  height: 100px;
-  width: 100px;
-  position: fixed;
-  background-color:#46FF28;
-}*/
+.starting-message {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 25px;
+  text-transform: uppercase;
+  text-align: center;
+  margin-top: 5px;
+  letter-spacing: 1px;
+}
+
+
+/* ----------- Footer controls */
+
+.social-links {
+  position: absolute;
+  top: 95%;
+  width: 100vw;
+}
+ul.social-list-links {
+  float: right;
+}
+
+.social-list-links {
+  display: inline;
+  text-decoration: none;
+  text-align: right;
+}
+
+a:link {
+  text-decoration: none;
+  margin: 0 10px;
+}

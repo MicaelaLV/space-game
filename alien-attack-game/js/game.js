@@ -42,8 +42,11 @@ Game.prototype.makeNewPosition = function($container) {
     return [nh, nw];
 };
 
-//click on death
+//click on instant death
 Game.prototype.catchBugs =
-    $(".a").on('click', function(evt){
-      console.log("you've clicked the bug");
+    $("#bug").on('click', function(evt){
+      $('#bug').removeClass("a").addClass('killed');
+      //$('#bug').addClass('killed');
+      console.log('you clicked on the bug');
+
     });
