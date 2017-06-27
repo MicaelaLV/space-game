@@ -39,6 +39,15 @@ div#container {
   background: url('../img/alienbug.jpg')no-repeat center;
 }
 
+
+
+.kill {
+  height: 400px;
+  width: 400px;
+  position: absolute;
+  background-color: red;
+}
+
 /*.b {
   height: 100px;
   width: 100px;
