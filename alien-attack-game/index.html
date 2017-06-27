@@ -36,48 +36,96 @@
     <h1 class="logo"> ALIEN ATTACK </h1>
   </div>
     <!--WELCOME MESSAGE ANIMATION-->
-  <div id="message-section">
+  <div id="js-message-section">
+    <!-- control message star wars like -->
+    <div style="overflow:hidden; position:absolute; left:0; top:0; width:50px; height:25px;">
+      <div style="margin-top:-290px;">
+        <object width="420" height="315">
+          <param name="allowFullScreen" value="true"></param>
+          <param name="allowscriptaccess" value="always"></param>
+        </object>
+      </div>
+    </div>
+      <!--starting message-->
+    <p id="start">Houston, we have a problem&hellip;</p>
+
+      <!--star wars like message-->
+    <div id="titles">
+      <div id="titlecontent">
+
+        <p class="center">ALIENS ARE ATTACKING EARTH</p>
+
+        <p>It is a period of vendor war.</p>
+        <p>This is a demonstration of Star Wars-style scrolling 3D titles in CSS3. It possibly has no practical purpose whatsoever but it looks great and you can impress your friends.</p>
+        <p>Before movie-buffs start ranting, I realize Star Wars wasn't the first to use crawling 3D titles, but few of you will remember the Flash Gordon series or the 1936 adaption of HG Wells' "Things to Come".</p>
+        <p>Also, by mentioning "Star Wars", everyone will understand what I mean. And I'll receive several thousand more visits.</p>
+        <p>The scrolling titles work well in Chrome, Safari and Firefox. Opera doesn't implement 3D transforms yet, but the text will scroll. IE users receive a blank page. A shame, but IE10 should support it.</p>
+        <p>So how does it work? Well, it's fairly simple. We have an outer absolute DIV (#titles) which is rotated along the X-axis using perspective to give the impression of depth. The same DIV also has an :after psuedo-element which applies a linear gradient so the text appears to fade out.</p>
+        <p>Inside, we have another absolutely-positioned DIV which contains the text (#titlecontent). The top is set to 100% to ensure it starts off-screen then uses CSS3 animation to move it upward over time. No JavaScript is required.</p>
+        <p>You will probably need to adjust the movement amount and timing depending on the quantity of text you want to show. The 3D depth can also be tweaked in the #titles declaration.</p>
+        <p>All the code is contained in this single HTML file&hellip;</p>
+
+      </div>
+    </div>
   </div>
 
-  <div id="container">
-    <div id="bug" class="a">
+  <!--ALIENS HERE -->
+  <div id="js-game-container">
+    <div id="bug" class="js-bug">
     </div>
-    <!--<div class="b"></div-->
-    <!--<div class="c"></div>-->
-</div>
-    <!--PLAY HERE SELECTION-->
+  </div>
+
+
+  <!--GAME SECTION-->
+    <div class="js-countdown">
+    </div>
+
+    <div class="js-alien-kills">
+    </div>
+
+  <!-- ALIEN HEALTH TO BE SET AFTER LEVEL 3-->
+    <div class="js-alien-health">
+    </div>
+
+    <!-- GAME OVER SCREEN -->
+    <div class="js-game-over">
+    </div>
+
+  <!--PLAY HERE SELECTION-->
   <div id="js-starting-command">
 <p class="starting-message">To start playing press the Space bar</p>
   </div>
     <!--FOOTER & SOCIAL LINKS-->
 <footer class="social-links">
-  <!--<p>Developed by MLV - If you've liked it please show some love on my socials</p>-->
+
     <ul class="social-list-links">
-      <li class="social-list-links"><a href="#">Facebook<img src="" alt=""></a></li>
-        <li class="social-list-links"><a href="#">Instagram<img src="" alt=""></a></li>
-          <li class="social-list-links"><a href="#">Linkedin<img src="" alt=""></a></li>
-            <li class="social-list-links"><a href="#">Github<img src="" alt=""></a></li>
+      <!-- FACEBOOK -->
+      <li class="social-list-links">
+        <a href="#">
+          <i class="fa fa-facebook-official" aria-hidden="true"></i>
+        </a>
+      </li>
+      <!-- INSTAGRAM -->
+        <li class="social-list-links">
+          <a href="#">
+            <i class="fa fa-instagram" aria-hidden="true"></i>
+          </a>
+        </li>
+        <!-- LINKEDIN -->
+          <li class="social-list-links">
+            <a href="#">
+              <i class="fa fa-linkedin-square" aria-hidden="true"></i>
+            </a>
+          </li>
+          <!-- GITHUB -->
+            <li class="social-list-links">
+              <a href="#">
+                <i class="fa fa-github-square" aria-hidden="true"></i>
+              </a>
+            </li>
     </ul>
 </footer>
-
-
-<!--GAME SECTION
-  <div class="countdown">
-  </div>
-
-  <div class="alien-kills">
-  </div>
-
-  <div class="alien-health">
-  </div>
-
-  <div class="game-container">
-  </div>
--->
-
-
 </main>
-
 
 <!--JQUERY-->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -85,6 +133,9 @@
 <!--JAVASCRIPT LOCAL FILE -->
 <script type="text/javascript" src="js/game.js"></script>
 <script type="text/javascript" src="js/app.js"></script>
+
+<!-- FONT AWESOME -->
+<script src="https://use.fontawesome.com/a5b0ff2a98.js"></script>
 
 </body>
 

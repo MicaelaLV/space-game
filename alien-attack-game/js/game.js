@@ -1,6 +1,22 @@
 function Game() {
 }
 
+//start game on SPACE PRESS
+$(window).keypress(function (e) {
+  if (e.keyCode === 0 || e.keyCode === 32) {
+    e.preventDefault();
+    console.log('Space pressed');
+//hide message section
+    $("js-message-section").css('display', 'none');
+//show game container
+    $('js-game-container').css('display', 'initial');
+
+
+
+  }
+});
+
+
 
 //animate the bug
 Game.prototype.animateBug = function($target) {
@@ -33,7 +49,7 @@ Game.prototype.calcSpeed = function(prev, next) {
 //create a new position
 Game.prototype.makeNewPosition = function($container) {
     // Get viewport dimensions (remove the dimension of the div)
-    $container = $('#container');
+    $container = $('#js-game-container');
     var h = $container.height() - 150;
     var w = $container.width() - 150;
     var nh = Math.floor(Math.random() * h);
@@ -45,7 +61,7 @@ Game.prototype.makeNewPosition = function($container) {
 //click on instant death
 Game.prototype.catchBugs =
     $("#bug").on('click', function(evt){
-      $('#bug').removeClass("a").addClass('killed');
+      $('#bug').removeClass("js-bug").addClass('js-killed');
       //$('#bug').addClass('killed');
       console.log('you clicked on the bug');
 

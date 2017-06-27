@@ -4,7 +4,5 @@ $(document).ready(function(){
 
   var game = new Game();
 
-  game.animateBug($('.a'));
-      //animateDiv($('.b'));
-        //animateDiv($('.c'));
-});
+  game.animateBug($('.js-bug'));
+      });
