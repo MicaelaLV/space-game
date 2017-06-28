@@ -23,7 +23,7 @@ Game.prototype.calcSpeed = function(prev, next) {
 
       var greatest = x > y ? x : y;
 
-      var speedModifier = 0.2;
+      var speedModifier = 0.5;
 
       var speed = Math.ceil(greatest / speedModifier);
 
@@ -36,11 +36,27 @@ Game.prototype.makeNewPosition = function($container) {
     $container = $('#js-game-container');
     var h = $container.height()-250;
     var w = $container.width()-250;
-    console.log("the height is " + h, "The width is " + w);
+    //console.log("the height is " + h, "The width is " + w);
     var nh = Math.floor(Math.random() * h);
     var nw = Math.floor(Math.random() * w);
 
     return [nh, nw];
+};
+
+
+//timer
+Game.prototype.timer = function() {
+
+    var i = 10;
+    var intervalId = setInterval(function() {
+      if (i > 0) {
+        document.getElementById("timer").innerHtml = "00:" + i;
+      } else {
+        document.getElementById("timer").innerHtml = "00:" + (0);
+        clearInterval(intervalId);
+      }
+      i--;
+    }, 1000);
 };
 
 

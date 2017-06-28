@@ -3,6 +3,7 @@ font-family: 'Montserrat', sans-serif;
 font-family: 'Exo 2', sans-serif;
 font-family: 'Kanit', sans-serif;
 font-family: 'Work Sans', sans-serif;
+font-family: 'Roboto Slab', serif;
 */
 
 html, body { padding: 0;margin: 0; height: 100%; overflow: hidden}
@@ -185,10 +186,30 @@ p#start {
 /* -------------------------------------- GAME ON
 -----------------------------------------------------------------------*/
 
+/* TIMER - COUNTDOWN */
+div.js-countdown {
+  position: absolute;
+  top: 12%;
+  left: 6%;
+  width: 140px;
+	height: 70px;
+	border-radius: 8px;
+	background-color: #000000;
+	border: solid 5px #46FF28;
+  font-family: 'Roboto Slab', serif;
+  color: #F5FE0D;
+  text-align: center;
+  font-size: 50px;
+  display: none;
+}
+
+
+
+
 /* GAME CONTAINER */
 div#js-game-container {
   background-image: radial-gradient(circle at 50% 52%, #312f70, #2e154c);
-  border: solid 3px #2E154C;
+  border: solid 3px #4A4848;
   border-radius: 20px;
   position: absolute;
   top: 300px;

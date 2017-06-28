@@ -14,13 +14,17 @@ $(document).ready(function(){
           $('#js-starting-command').hide();
   //show game container
       $('#js-game-container').css('display', 'inherit');
+  //show timer
+      $('#timer').css('display', 'inherit');
  //show bug
       $('.js-bug').css('display', 'inherit');
     }
+
   });
 
 //initializing Game
   var game = new Game();
+  game.timer($('#timer'));
   game.animateBug($('.js-bug'));
 
 });
