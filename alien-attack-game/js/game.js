@@ -6,7 +6,7 @@ function Game() {
 
   this.addBugs = function () {
     console.log('Adding new bug to the collection');
-    var bug = new Bug(1);
+    var bug = new Bug(3);
     this.bugsCollection.push(bug);
     $('#js-game-container').append($('<div>')
                            .addClass('js-bug')
@@ -17,8 +17,6 @@ function Game() {
   this.addBugs();
   console.log(this.bugsCollection);
   this.bugsCollection[0].animateBug($('.js-bug'));
-
-
 
 }
 
@@ -81,7 +79,7 @@ Bug.prototype.animateBug = function($target) {
 
         var greatest = x > y ? x : y;
 
-        var speedModifier = 0.2;
+        var speedModifier = 0.5;
 
         var speed = Math.ceil(greatest / speedModifier);
 
@@ -92,28 +90,44 @@ Bug.prototype.animateBug = function($target) {
   Bug.prototype.makeNewPosition = function($container) {
       // Get viewport dimensions
       $container = $('#js-game-container');
-      var h = $container.height()-250;
-      var w = $container.width()-250;
-      //console.log("the height is " + h, "The width is " + w);
+      var h = $container.height()-150;
+      var w = $container.width()-150;
       var nh = Math.floor(Math.random() * h);
       var nw = Math.floor(Math.random() * w);
 
       return [nh, nw];
   };
 
-
-
-//stop the spot
-//use the calcSpeed and modify the speedModifier to 0 so the bug will stop there.
-//stop every element with this class js-killed
+  //stop the spot
+  //stop every element with this class js-killed
+  Game.prototype.clearBlood = function() {
+    if (game.bugsCollection[0] == "Bug") {
+      console.log("Cleaning alien blood here");
+      setTimeout(function() {
+  //---------add 1 point to the score of alien kills
+          $(this).removeClass("js-killed");
+          game.bugsCollection = [];
+      }, 1000);
+    } return true;
+  };
 
 //click on instant death
 Game.prototype.catchBugs =
-  $(document).on('click','.js-bug', function(evt){
+$(document).on('click','.js-bug', function(evt){
+    var audio2 = new Audio('audio/pain.wav');
+    audio2.play();
+    var audio = new Audio('audio/splat.wav');
+    audio.play();
     console.log('you clicked on the bug');
     $(this).removeClass("js-bug").addClass('js-killed');
     game.addBugs();
     console.log(game.bugsCollection);
     game.bugsCollection[0].animateBug($('.js-bug'));
-
+    //game.clearBlood();
   });
+
+  //Game over
+
+  Game.prototype.gameOver = function () {
+    $('.main').css('display', 'none');
+  };

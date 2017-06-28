@@ -20,11 +20,17 @@ $(document).ready(function(){
       $('.js-bug').css('display', 'inherit');
     }
 
+//gun sound
+    $('div#js-game-container').on('click', function(evt){
+      var audio = new Audio('audio/gun.mp3');
+        audio.play();
+    });
+
   });
 
 //initializing Game
   game = new Game();
   //game.timer($('#timer'));
   //game.animateBug($('.js-bug'));
-
+  //game.gameOver(document);
 });

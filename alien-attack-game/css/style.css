@@ -220,6 +220,11 @@ div#js-game-container {
   display:none;
 }
 
+div#js-game-container:hover {
+  cursor: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/46992/pointer.svg), auto;
+}
+
+
 /* ----------- Bugs Controls */
 
 /* BUGS SHOWING */
@@ -227,7 +232,23 @@ div#js-game-container {
   height: 200px;
   width: 200px;
   position: absolute;
+  background: url('../img/bugs/alien200.png')no-repeat center;
+  background-size: contain;
+}
+
+.js-bug.small {
+  height: 100px;
+  width:100px;
+  position: absolute;
   background: url('../img/bugs/alien100.png')no-repeat center;
+  background-size: contain;
+}
+
+.js-bug.medium {
+  height: 150px;
+  width:150px;
+  position: absolute;
+  background: url('../img/bugs/alien150.png')no-repeat center;
   background-size: contain;
 }
 
@@ -237,13 +258,9 @@ div#js-game-container {
   width: 200px;
   position: absolute;
   background: url('../img/bugs/spot150.png')no-repeat center;
-  opacity: 0.7;
+  /*opacity: 0.7;*/
 }
 
-/* TIME COUNTDOWN */
-div#js-countdown {
-  display:none;
-}
 
 /* ALIEN KILLS SCORE */
 div#js-alien-kills {
@@ -256,9 +273,13 @@ div#js-alien-health {
 }
 
 /* GAME OVER */
-div#js-game-over {
-  display:none;
-}
+.js-game-over {
+  display: none;
+  height: 100vw;
+  width: auto;
+  background: url('../img/bugs/game-over.png')no-repeat center;
+  top: 10px;
+  }
 
 /* ----------- Starting command */
 #js-starting-command {
