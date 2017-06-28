@@ -32,21 +32,26 @@ Game.prototype.calcSpeed = function(prev, next) {
 
 //create a new position
 Game.prototype.makeNewPosition = function($container) {
-    // Get viewport dimensions (remove the dimension of the div)
+    // Get viewport dimensions
     $container = $('#js-game-container');
-    var h = $container.height() - 150;
-    var w = $container.width() - 150;
+    var h = $container.height()-250;
+    var w = $container.width()-250;
+    console.log("the height is " + h, "The width is " + w);
     var nh = Math.floor(Math.random() * h);
     var nw = Math.floor(Math.random() * w);
 
     return [nh, nw];
 };
 
+
+//stop the spot
+//use the calcSpeed and modify the speedModifier to 0 so the bug will stop there.
+
 //click on instant death
 Game.prototype.catchBugs =
     $("#bug").on('click', function(evt){
       $('#bug').removeClass("js-bug").addClass('js-killed');
-      //$('#bug').addClass('killed');
+
       console.log('you clicked on the bug');
 
     });
