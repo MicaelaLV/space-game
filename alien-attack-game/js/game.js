@@ -1,22 +1,6 @@
 function Game() {
+
 }
-
-//start game on SPACE PRESS
-$(window).keypress(function (e) {
-  if (e.keyCode === 0 || e.keyCode === 32) {
-    e.preventDefault();
-    console.log('Space pressed');
-//hide message section
-    $("js-message-section").css('display', 'none');
-//show game container
-    $('js-game-container').css('display', 'initial');
-
-
-
-  }
-});
-
-
 
 //animate the bug
 Game.prototype.animateBug = function($target) {

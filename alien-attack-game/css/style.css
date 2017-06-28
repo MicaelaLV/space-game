@@ -5,7 +5,8 @@ font-family: 'Kanit', sans-serif;
 font-family: 'Work Sans', sans-serif;
 */
 
-* { padding: 0; margin: 0; }
+html, body { padding: 0;margin: 0; height: 100%; overflow: hidden}
+
 
 *:before *:after {
   box-sizing: border-box;
@@ -148,11 +149,11 @@ p#start {
 #titlecontent {
 	position: absolute;
 	top: 100%;
-	-webkit-animation: scroll 100s linear 4s infinite;
-	-moz-animation: scroll 100s linear 4s infinite;
-	-ms-animation: scroll 100s linear 4s infinite;
-	-o-animation: scroll 100s linear 4s infinite;
-	animation: scroll 100s linear 4s infinite;
+	-webkit-animation: scroll 100s linear 2s infinite;
+	-moz-animation: scroll 100s linear 2s infinite;
+	-ms-animation: scroll 100s linear 2s infinite;
+	-o-animation: scroll 100s linear 2s infinite;
+	animation: scroll 100s linear 2s infinite;
 }
 
 /* animation */
@@ -181,19 +182,24 @@ p#start {
 	100% { top: -170%; }
 }
 
-
-/* ----------- Bugs Controls */
+/* -------------------------------------- GAME ON
+-----------------------------------------------------------------------*/
 
 /* GAME CONTAINER */
 div#js-game-container {
-  border: 2px solid white;
-  background-color: #0F2D62;
-  height: 90vh;
+  background-image: radial-gradient(circle at 50% 52%, #312f70, #2e154c);
+  border: solid 3px #2E154C;
+  border-radius: 20px;
+  position: absolute;
+  top: 300px;
+  left: 5%;
+  height: 550px;
   width: 90vw;
   margin-right: 20 auto;
-  padding: 20px;
   display:none;
 }
+
+/* ----------- Bugs Controls */
 
 /* BUGS SHOWING */
 .js-bug {
