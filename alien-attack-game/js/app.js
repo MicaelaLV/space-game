@@ -1,5 +1,5 @@
 console.log("Aliens are ready to rock on! so are we!");
-
+var game;
 $(document).ready(function(){
 
 
@@ -23,7 +23,7 @@ $(document).ready(function(){
   });
 
 //initializing Game
-  var game = new Game();
+  game = new Game();
   //game.timer($('#timer'));
   //game.animateBug($('.js-bug'));
 

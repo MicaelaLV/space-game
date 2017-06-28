@@ -2,16 +2,24 @@
 function Game() {
   this.bugsCollection = [];
     //console.log(this.bugsCollection);
+  this.bugNumber = 0;
 
   this.addBugs = function () {
     console.log('Adding new bug to the collection');
-    var bug = new Bug(100);
+    var bug = new Bug(1);
     this.bugsCollection.push(bug);
+    $('#js-game-container').append($('<div>')
+                           .addClass('js-bug')
+                           .attr('id', this.bugNumber));
+    this.bugNumber++;
   };
 
   this.addBugs();
   console.log(this.bugsCollection);
   this.bugsCollection[0].animateBug($('.js-bug'));
+
+
+
 }
 
 
@@ -24,7 +32,7 @@ function Game() {
 //       if (i > 0) {
 //         document.getElementById("timer").innerHtml = "00:" + i;
 //       } else {
-//         document.getElementById("timer").innerHtml = "00:" + (0);
+//         document.getElementById("t««imer").innerHtml = "00:" + (0);
 //         clearInterval(intervalId);
 //       }
 //       i--;
@@ -33,8 +41,12 @@ function Game() {
 //
 
 function Bug(life) {
+  //creating bug dynamically
+  console.log('Bug Constructor called');
+
   //implement life & damage functions
   this.life = life;
+
   this.receiveDamage = function(damage) {
     this.life = this.life - damage;
       if(this.life > 0) {
@@ -44,6 +56,8 @@ function Bug(life) {
       }
     };
 }
+
+
 
 //animate the bug
 Bug.prototype.animateBug = function($target) {
@@ -67,7 +81,7 @@ Bug.prototype.animateBug = function($target) {
 
         var greatest = x > y ? x : y;
 
-        var speedModifier = 0.5;
+        var speedModifier = 0.2;
 
         var speed = Math.ceil(greatest / speedModifier);
 
@@ -91,15 +105,15 @@ Bug.prototype.animateBug = function($target) {
 
 //stop the spot
 //use the calcSpeed and modify the speedModifier to 0 so the bug will stop there.
+//stop every element with this class js-killed
 
 //click on instant death
 Game.prototype.catchBugs =
-    $("#bug").on('click', function(evt){
-      $('#bug').removeClass("js-bug").addClass('js-killed');
+  $(document).on('click','.js-bug', function(evt){
+    console.log('you clicked on the bug');
+    $(this).removeClass("js-bug").addClass('js-killed');
+    game.addBugs();
+    console.log(game.bugsCollection);
+    game.bugsCollection[0].animateBug($('.js-bug'));
 
-      console.log('you clicked on the bug');
-      this.addBugs();
-      console.log(this.bugsCollection);
-      //this.bugsCollection[0].animateBug($('.js-bug'));
-
-    });
+  });
