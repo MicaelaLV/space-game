@@ -24,7 +24,7 @@ $(document).ready(function(){
 
 //initializing Game
   var game = new Game();
-  game.timer($('#timer'));
-  game.animateBug($('.js-bug'));
+  //game.timer($('#timer'));
+  //game.animateBug($('.js-bug'));
 
 });
