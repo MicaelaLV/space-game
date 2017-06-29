@@ -9,10 +9,12 @@ $(document).ready(function(){
       e.preventDefault();
       console.log('Space pressed');
   //start timer
-      game.timer();
+  $('.js-timing').show();
+  game.timer();
 
   //start killsScore
-      game.bugsKilled();
+  $('.js-kills-score').show();
+  game.bugsKilled();
   //hide message section
       $("#js-message-section").css('display', 'none');
   //hide starting game message

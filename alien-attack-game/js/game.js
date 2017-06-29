@@ -20,7 +20,7 @@ function Game() {
 this.addBugs();
 this.bugsCollection[0].animateBug($('.js-bug'));
 
-  for(var i = 0; i < 10; i++){
+  for(var i = 0; i < 60; i++){
     this.addBugs(i);
     this.bugsCollection[0].animateBug($('.js-bug'));
   }
@@ -33,7 +33,7 @@ Game.prototype.timer = function() {
     this.timer = 60;
     var intervalId = setInterval(function() {
       if (this.timer > 0) {
-        $('.js-countdown').show();
+        $('.js-timing').show();
         $("#timer").text(this.timer);
         this.gameOver();
       } else {
@@ -48,9 +48,8 @@ Game.prototype.timer = function() {
 
 //_________________________________________________________________KILLS SCORE
 Game.prototype.bugsKilled = function(){
+  //$('.js-kills-score').show();
   this.bugsKilled = 0;
-  $('.score-container').show();
-  $('.js-alien-kills').show();
 };
 
 //______________________________________________________________BUG CONSTRUCTOR
@@ -113,7 +112,7 @@ Game.prototype.catchBugs = function(){
       game.bugsCollection.pop();
       console.log(game.bugsCollection);
       game.bugsKilled+=100;
-      $("#js-bugsKillScore").empty()
+      $("#js-bugsKillScore").empty();
       var score = $('#js-bugsKillScore')[0];
       $(score).append(game.bugsKilled);
       console.log($('#js-bugsKillScore')[0]);
