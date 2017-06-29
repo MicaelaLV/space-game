@@ -187,6 +187,19 @@ p#start {
 _____________________________________________________________________________*/
 
 /* TIMER - COUNTDOWN */
+div.timer-container {
+  position: absolute;
+  top: 5%;
+  left: 6%;
+}
+
+.time {
+font-family: 'Montserrat', sans-serif;
+font-size: 50px;
+color:#F72D99;
+font-weight: 400;
+}
+
 div.js-countdown {
   position: absolute;
   top: 12%;
@@ -200,9 +213,7 @@ div.js-countdown {
   color: #F5FE0D;
   text-align: center;
   font-size: 50px;
-  display: none;
 }
-
 
 /* GAME CONTAINER */
 div#js-game-container {
@@ -261,12 +272,32 @@ div#js-game-container:hover {
 
 
 /* ALIEN KILLS SCORE */
-div#js-alien-kills {
-  display:none;
+div.score-container {
+  position: absolute;
+  top: 5%;
+  left: 80%;
 }
 
-/* ALIEN HEALTH SCORE */
-div#js-alien-health {
+h4.alien-kills {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 50px;
+  color:#F72D99;
+  font-weight: 400;
+}
+
+.js-alien-kills{
+  position: absolute;
+  top: 5%;
+  left: 80%;
+  width: 140px;
+  height: 70px;
+  border-radius: 8px;
+  background-color: #000000;
+  border: solid 5px #46FF28;
+  font-family: 'Roboto Slab', serif;
+  color: #F5FE0D;
+  text-align: center;
+  font-size: 50px;
   display:none;
 }
 

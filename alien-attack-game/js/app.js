@@ -11,6 +11,8 @@ $(document).ready(function(){
   //start timer
       game.timer();
 
+  //start killsScore
+      game.bugsKilled();
   //hide message section
       $("#js-message-section").css('display', 'none');
   //hide starting game message
