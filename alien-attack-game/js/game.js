@@ -30,17 +30,16 @@ this.bugsCollection[0].animateBug($('.js-bug'));
 
 //_______________________________________________________________________TIMER
 Game.prototype.timer = function() {
-    this.timer = 60;
+    this.timer = 5;
     var intervalId = setInterval(function() {
-      if (this.timer > 0) {
-        $('.js-timing').show();
-        $("#timer").text(this.timer);
-        this.gameOver();
+      if (this.timer > 9) {
+        $("#timer").text("00:"+this.timer);
+      } else if (this.timer > 0) {
+        $("#timer").text("00:0"+this.timer);
       } else {
-        this.gameOver();
-
         $("#timer").text(this.timer);
         clearInterval(intervalId);
+          this.gameOver();
       }
       this.timer--;
     }.bind(this), 1000);
@@ -48,7 +47,6 @@ Game.prototype.timer = function() {
 
 //_________________________________________________________________KILLS SCORE
 Game.prototype.bugsKilled = function(){
-  //$('.js-kills-score').show();
   this.bugsKilled = 0;
 };
 
@@ -110,13 +108,14 @@ Game.prototype.catchBugs = function(){
     setTimeout(function(){
       $(this).remove();
       game.bugsCollection.pop();
-      console.log(game.bugsCollection);
+      //console.log(game.bugsCollection);
       game.bugsKilled+=100;
       $("#js-bugsKillScore").empty();
       var score = $('#js-bugsKillScore')[0];
       $(score).append(game.bugsKilled);
-      console.log($('#js-bugsKillScore')[0]);
-      console.log(game.bugsKilled);
+        game.gameOver();
+      //console.log($('#js-bugsKillScore')[0]);
+      //console.log(game.bugsKilled);
     }.bind(this), 500);
 
   //add new bug
@@ -126,9 +125,24 @@ Game.prototype.catchBugs = function(){
 
 
 Game.prototype.gameOver = function() {
-  if (game.bugsKilled === 100000) {
+  if (game.bugsKilled === 100) {
+    $('#js-game-container').hide();
+    $('.js-kills-score').hide();
+    $('.js-timing').hide();
+    $('.landing-logo').hide();
+    $('.js-won').show();
+    $('.js-won').addClass('animated fadeInDown');
+
+
     return console.log('YOU WON');
   } else if(game.timer === 0){
+    $('#js-game-container').hide();
+    $('.js-kills-score').hide();
+    $('.js-timing').hide();
+    $('.landing-logo').hide();
+    $('.js-game-over').show();
+    $('.js-won').addClass('animated fadeInDown');
+
     return console.log('GAME OVER');
   }
 };

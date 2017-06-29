@@ -30,14 +30,9 @@
 </head>
 <body>
   <main class="main-container">
-
+    <div class="stars">
+      <div class="twinkling">
 <!--LANDING PAGE-->
-
-<!-- GAME OVER SCREEN -->
-<div class="js-game-over">
-  <h1 class="js-game-over">GAME OVER</h1>
-</div>
-
 <!--LOGO HERE -->
   <div class="landing-logo">
     <img src="img/logo.png" alt="alien attack logo" class="logo-img" height="280"/>
@@ -62,13 +57,13 @@
 
         <p class="center">ALIENS ARE ATTACKING EARTH</p>
 
-        <p>Join the NASA pilots to protect our spieces against the Alien Bugs that are trying to invade our planet.</p>
+        <p>Join the NASA pilots to protect our species against the Alien Bugs that are trying to invade our planet.</p>
         <p>Be prepared to fight with your mouse. You'll be able to kill them by MOVING YOUR POINTER and MAKING THEM POP.</p>
         <p>You'll be among tireless fighters improving their killing score with any bugs they meet.</p>
         <p>And don't forget to do your best to avenge your fellow brothers fallen under the enemy army.</p>
         <p>The rebellion crew awaits you...</p>
         <p>MAY THE FORCE BE WITH YOU&hellip;</p>
-        
+
       </div>
     </div>
   </div>
@@ -100,6 +95,20 @@
       </div>
     </div>
 </div>
+
+<!--GAME OVER-->
+<div class="js-game-over">
+  <p class="game-over">GAME OVER</p>
+  <a  class="button play-again" href="#">play again</a>
+</div>
+
+
+<!--YOU WON-->
+<div class="js-won">
+  <p class="won">YOU WON</p>
+  <a  class="button play-again" href="file:///Users/micaela/code/labs/space-game/alien-attack-game/index.html">play again</a>
+</div>
+
 <!--PLAY HERE SELECTION-->
   <div id="js-starting-command">
     <p class="starting-message animated pulse">To start playing press the Space bar</p>
@@ -138,8 +147,10 @@
             </li>
     </ul>
 </footer>
-
+  </div>
+  </div>
 </main>
+
 
 <!--JQUERY-->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
