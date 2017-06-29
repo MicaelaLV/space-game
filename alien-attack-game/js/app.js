@@ -2,7 +2,8 @@ console.log("Aliens are ready to rock on! so are we!");
 var game;
 $(document).ready(function(){
 
-
+var audio4 = new Audio('audio/Houston.mp3');
+audio4.play();
   //start game on SPACE PRESS
   $(window).keypress(function (e) {
     if (e.keyCode === 0 || e.keyCode === 32) {

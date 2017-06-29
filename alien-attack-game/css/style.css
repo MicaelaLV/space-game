@@ -57,11 +57,11 @@ p#start {
 	color: #4ee;
 	opacity: 0;
 	z-index: 1;
-	-webkit-animation: intro 2s ease-out;
-	-moz-animation: intro 2s ease-out;
-	-ms-animation: intro 2s ease-out;
-	-o-animation: intro 2s ease-out;
-	animation: intro 2s ease-out;
+	-webkit-animation: intro 15s ease-out;
+	-moz-animation: intro 15s ease-out;
+	-ms-animation: intro 15s ease-out;
+	-o-animation: intro 15s ease-out;
+	animation: intro 15s ease-out;
 }
 
 @-webkit-keyframes intro {
@@ -149,11 +149,11 @@ p#start {
 #titlecontent {
 	position: absolute;
 	top: 100%;
-	-webkit-animation: scroll 100s linear 2s infinite;
-	-moz-animation: scroll 100s linear 2s infinite;
-	-ms-animation: scroll 100s linear 2s infinite;
-	-o-animation: scroll 100s linear 2s infinite;
-	animation: scroll 100s linear 2s infinite;
+	-webkit-animation: scroll 100s linear 13s infinite;
+	-moz-animation: scroll 100s linear 13s infinite;
+	-ms-animation: scroll 100s linear 13s infinite;
+	-o-animation: scroll 100s linear 13s infinite;
+	animation: scroll 100s linear 13s infinite;
 }
 
 /* animation */
