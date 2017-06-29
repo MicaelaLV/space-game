@@ -8,29 +8,26 @@ $(document).ready(function(){
     if (e.keyCode === 0 || e.keyCode === 32) {
       e.preventDefault();
       console.log('Space pressed');
+  //start timer
+      game.timer();
+
   //hide message section
       $("#js-message-section").css('display', 'none');
   //hide starting game message
           $('#js-starting-command').hide();
   //show game container
       $('#js-game-container').css('display', 'inherit');
-  //show timer
-      $('#timer').css('display', 'inherit');
- //show bug
-      $('.js-bug').css('display', 'inherit');
-    }
+}
 
 //gun sound
     $('div#js-game-container').on('click', function(evt){
-      var audio = new Audio('audio/gun.mp3');
-        audio.play();
+      var audio3 = new Audio('audio/gun.mp3');
+        audio3.play();
     });
 
   });
 
 //initializing Game
   game = new Game();
-  //game.timer($('#timer'));
-  //game.animateBug($('.js-bug'));
-  //game.gameOver(document);
+  game.catchBugs();
 });

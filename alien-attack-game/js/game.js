@@ -1,58 +1,63 @@
 // GAME CONSTRUCTOR
 function Game() {
+
+  //this.levelsList = [new Level(1), new Level(3)]
+
+    //creating empty array of bugs
   this.bugsCollection = [];
     //console.log(this.bugsCollection);
+
+    //setting a counter on the bugs number
   this.bugNumber = 0;
 
+    //functions to add bugs in the array with their methods
   this.addBugs = function () {
-    console.log('Adding new bug to the collection');
-    var bug = new Bug(3);
-    this.bugsCollection.push(bug);
-    $('#js-game-container').append($('<div>')
-                           .addClass('js-bug')
-                           .attr('id', this.bugNumber));
-    this.bugNumber++;
+      console.log('Adding new bug to the collection');
+  var bug = new Bug();
+  this.bugsCollection.push(bug);
+
+    //adding bugs dynamically within the game container
+  $('#js-game-container').append($('<div>')
+                         .addClass('js-bug')
+                         .attr('id', this.bugNumber));
+
+    //adding one per each bug to the bug counter
+  this.bugNumber++;
   };
 
+
   this.addBugs();
-  console.log(this.bugsCollection);
+
+    console.log(this.bugsCollection);
+
   this.bugsCollection[0].animateBug($('.js-bug'));
 
 }
 
 
 
-// //timer
-// Game.prototype.timer = function() {
-//
-//     var i = 10;
-//     var intervalId = setInterval(function() {
-//       if (i > 0) {
-//         document.getElementById("timer").innerHtml = "00:" + i;
-//       } else {
-//         document.getElementById("t««imer").innerHtml = "00:" + (0);
-//         clearInterval(intervalId);
-//       }
-//       i--;
-//     }, 1000);
-// };
-//
+//timer
+Game.prototype.timer = function() {
+    this.timer = 10;
+    var intervalId = setInterval(function() {
+      if (this.timer > 0) {
 
-function Bug(life) {
-  //creating bug dynamically
-  console.log('Bug Constructor called');
-
-  //implement life & damage functions
-  this.life = life;
-
-  this.receiveDamage = function(damage) {
-    this.life = this.life - damage;
-      if(this.life > 0) {
-        //return life - damage
+        $('.js-countdown').show();
+        console.log('in timer', this.timer);
+        $("#timer").text("00:" + this.timer);
       } else {
-        //game over
+        $("#timer").text("00:" + this.timer);
+        clearInterval(intervalId);
+
       }
-    };
+      this.timer--;
+    }.bind(this), 1000);
+};
+
+
+function Bug() {
+
+  console.log('Bug Constructor called');
 }
 
 
@@ -98,33 +103,42 @@ Bug.prototype.animateBug = function($target) {
       return [nh, nw];
   };
 
-  //stop the spot
-  //stop every element with this class js-killed
-  Game.prototype.clearBlood = function() {
-    if (game.bugsCollection[0] == "Bug") {
-      console.log("Cleaning alien blood here");
-      setTimeout(function() {
-  //---------add 1 point to the score of alien kills
-          $(this).removeClass("js-killed");
-          game.bugsCollection = [];
-      }, 1000);
-    } return true;
-  };
-
 //click on instant death
-Game.prototype.catchBugs =
-$(document).on('click','.js-bug', function(evt){
+Game.prototype.catchBugs = function(){
+  var game = this;
+  $(document).on('click','.js-bug', function(evt){
+    //play scream
     var audio2 = new Audio('audio/pain.wav');
-    audio2.play();
+      audio2.play();
+    //play splat
     var audio = new Audio('audio/splat.wav');
-    audio.play();
-    console.log('you clicked on the bug');
+      audio.play();
+
+      console.log('you clicked on the bug');
+  //remove bug image & add splat
+
+    game.timer += 10
+    console.log(game.timer)
+
     $(this).removeClass("js-bug").addClass('js-killed');
-    game.addBugs();
+
+  //wait 3 seconds & clean blood
+    setTimeout(function(){
+      $(this).remove();
+      game.bugsCollection = [];
+    }.bind(this), 500);
+
+
+  //add new bug
+      game.addBugs();
+
     console.log(game.bugsCollection);
+
     game.bugsCollection[0].animateBug($('.js-bug'));
-    //game.clearBlood();
-  });
+
+    });
+}
+
 
   //Game over
 
