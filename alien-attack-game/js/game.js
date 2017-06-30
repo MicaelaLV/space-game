@@ -20,7 +20,7 @@ function Game() {
 this.addBugs();
 this.bugsCollection[0].animateBug($('.js-bug'));
 
-  for(var i = 0; i < 60; i++){
+  for(var i = 0; i < 55; i++){
     this.addBugs(i);
     this.bugsCollection[0].animateBug($('.js-bug'));
   }
@@ -30,7 +30,7 @@ this.bugsCollection[0].animateBug($('.js-bug'));
 
 //_______________________________________________________________________TIMER
 Game.prototype.timer = function() {
-    this.timer = 5;
+    this.timer = 30;
     var intervalId = setInterval(function() {
       if (this.timer > 9) {
         $("#timer").text("00:"+this.timer);
@@ -95,7 +95,7 @@ Game.prototype.catchBugs = function(){
   $(document).on('click','.js-bug', function(evt){
 
     //play scream
-    var audio2 = new Audio('audio/pain.wav');
+    var audio2 = new Audio('audio/scream.wav');
       audio2.play();
     //play splat
     var audio = new Audio('audio/splat.wav');
@@ -132,9 +132,11 @@ Game.prototype.gameOver = function() {
     $('.landing-logo').hide();
     $('.js-won').show();
     $('.js-won').addClass('animated fadeInDown');
-
+     var audio3 = new Audio('audio/won.mp3');
+     audio3.play();
 
     return console.log('YOU WON');
+
   } else if(game.timer === 0){
     $('#js-game-container').hide();
     $('.js-kills-score').hide();

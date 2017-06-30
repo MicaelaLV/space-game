@@ -269,7 +269,7 @@ font-weight: 400;
 
 div.js-countdown {
   position: relative;
-  width: 200px;
+  width: 150px;
 	height: 70px;
 	border-radius: 8px;
 	background-color: #000000;
@@ -399,35 +399,29 @@ div.js-won {
   width: 100vw;
   position: relative;
   bottom: 300px;
-  background: url('../img/bugs/game-over.png')no-repeat center;
   background-color: #000;
   display:none;
 
 }
 
-.won {
-  font-family: 'Montserrat', sans-serif;
-  margin: 0 auto;
-  text-align: center;
-  font-size: 200px;
-  color: white;
-  position: absolute;
-  font-weight: 500;
-  top: 40%;
-  left: 20%;
+.won-img {
+  height: 800px;
+  width: auto;
+  position: relative;
+  top: 20%;
+  left: 10%;`
 }
 
-
-.button.play-again {
+.button.play-again-won {
   position: absolute;
-  top: 60%;
-  left: 45%;
+  top: 53%;
+  left: 51%;
   background-color: white;
   color: black;
   font-weight: bold;
 }
 
-/* ----------- Starting command */
+/*--------------- start the game command */
 #js-starting-command {
   position: absolute;
   top: 88%;
@@ -446,12 +440,34 @@ div.js-won {
   letter-spacing: 1px;
 }
 
+/* ----------- Stop the music */
+#stop-song {
+  position: absolute;
+  top: 95%;
+  right: 50%;
+  height: 30px;
+  width: 70vw;
+  color: #F72D99;
+  display: none;
+}
+
+.stop-song-playing {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 15px;
+  text-transform: capitalize;
+  text-align: center;
+  margin-top: 2px;
+  letter-spacing: 1px;
+
+}
+
 
 /* ----------- Footer controls */
 
 .social-links {
   position: absolute;
   top: 95%;
+  right: 4%;
   width: 100vw;
   color: white !important;
 }

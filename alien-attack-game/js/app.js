@@ -5,6 +5,11 @@ $(document).ready(function(){
 
 var audio4 = new Audio('audio/Houston.mp3');
 audio4.play();
+
+var audio5 = new Audio('audio/starwars.mp3');
+setTimeout(function(){ audio5.play(); }, 14000);
+
+
   //start game on SPACE PRESS
   $(window).keypress(function (e) {
     if (e.keyCode === 0 || e.keyCode === 32) {
@@ -13,6 +18,8 @@ audio4.play();
 
   //pause Houston audio
   audio4.pause();
+  audio5.pause();
+
 
   //start timer
   $('.js-timing').show();
@@ -27,15 +34,13 @@ audio4.play();
           $('#js-starting-command').hide();
   //show game container
       $('#js-game-container').show();
+
+  //show message for stopping the music
+      $('#stop-song').show();
+
 }
 
-//gun sound
-    $('div#js-game-container').on('click', function(evt){
-      var audio3 = new Audio('audio/gun.mp3');
-        audio3.play();
-    });
-
-  });
+});
 
 //initializing Game
   game = new Game();
