@@ -145,6 +145,8 @@ Game.prototype.gameOver = function() {
     $('.landing-logo').hide();
     $('.js-game-over').show();
     $('.js-won').addClass('animated fadeInDown');
+    var audio6 = new Audio('audio/noo.mp3');
+    audio6.play();
 
     return console.log('GAME OVER');
   }
