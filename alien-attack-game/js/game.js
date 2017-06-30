@@ -21,7 +21,8 @@ this.addBugs();
 this.bugsCollection[0].animateBug($('.js-bug'));
 
   for(var i = 0; i < 55; i++){
-
+    Math.floor(Math.random() * ((10-2)+1) + 2);
+    Math.floor(Math.random() * 1 + 2);
     this.addBugs(i);
     this.bugsCollection[0].animateBug($('.js-bug'));
   }
@@ -31,7 +32,7 @@ this.bugsCollection[0].animateBug($('.js-bug'));
 
 //_______________________________________________________________________TIMER
 Game.prototype.timer = function() {
-    this.timer = 5;
+    this.timer = 30;
     var intervalId = setInterval(function() {
       if (this.timer > 9) {
         $("#timer").text("00:"+this.timer);
