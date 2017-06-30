@@ -212,11 +212,11 @@ p#start {
 #titlecontent {
 	position: absolute;
 	top: 100%;
-	-webkit-animation: scroll 100s linear 13s infinite;
-	-moz-animation: scroll 100s linear 13s infinite;
-	-ms-animation: scroll 100s linear 13s infinite;
-	-o-animation: scroll 100s linear 13s infinite;
-	animation: scroll 100s linear 13s infinite;
+	-webkit-animation: scroll 100s linear 17s infinite;
+	-moz-animation: scroll 100s linear 17s infinite;
+	-ms-animation: scroll 100s linear 17s infinite;
+	-o-animation: scroll 100s linear 17s infinite;
+	animation: scroll 100s linear 17s infinite;
 }
 
 /* animation */
@@ -374,14 +374,22 @@ div.js-game-over {
   height: 100vw;
   width: 100vw;
   position: relative;
-  bottom: 300px;
-  background: url('../img/bugs/game-over.png')no-repeat center;
+  bottom: 350px;
+  background: url('../img/gameover.png')no-repeat center;
   background-color: #000;
   display:none;
   }
 
+  .button.play-again {
+    position: absolute;
+    top: 60%;
+    left: 45%;
+    background-color: white;
+    color: black;
+    font-weight: bold;
+  }
 
-.game-over {
+/*.game-over {
   font-family: 'Montserrat', sans-serif;
   margin: 0 auto;
   text-align: center;
@@ -391,7 +399,8 @@ div.js-game-over {
   font-weight: 500;
   top: 40%;
   left: 14%;
-}
+  display: block;
+}*/
 
 /*YOU WON*/
 div.js-won {
@@ -411,6 +420,8 @@ div.js-won {
   top: 20%;
   left: 10%;`
 }
+
+
 
 .button.play-again-won {
   position: absolute;

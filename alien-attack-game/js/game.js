@@ -21,6 +21,7 @@ this.addBugs();
 this.bugsCollection[0].animateBug($('.js-bug'));
 
   for(var i = 0; i < 55; i++){
+
     this.addBugs(i);
     this.bugsCollection[0].animateBug($('.js-bug'));
   }
@@ -30,7 +31,7 @@ this.bugsCollection[0].animateBug($('.js-bug'));
 
 //_______________________________________________________________________TIMER
 Game.prototype.timer = function() {
-    this.timer = 30;
+    this.timer = 5;
     var intervalId = setInterval(function() {
       if (this.timer > 9) {
         $("#timer").text("00:"+this.timer);
@@ -38,8 +39,8 @@ Game.prototype.timer = function() {
         $("#timer").text("00:0"+this.timer);
       } else {
         $("#timer").text(this.timer);
+        this.gameOver();
         clearInterval(intervalId);
-          this.gameOver();
       }
       this.timer--;
     }.bind(this), 1000);
@@ -125,7 +126,7 @@ Game.prototype.catchBugs = function(){
 
 
 Game.prototype.gameOver = function() {
-  if (game.bugsKilled === 100) {
+  if (game.bugsKilled === 6100) {
     $('#js-game-container').hide();
     $('.js-kills-score').hide();
     $('.js-timing').hide();
