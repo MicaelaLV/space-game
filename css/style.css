@@ -389,18 +389,6 @@ div.js-game-over {
     font-weight: bold;
   }
 
-/*.game-over {
-  font-family: 'Montserrat', sans-serif;
-  margin: 0 auto;
-  text-align: center;
-  font-size: 200px;
-  color: white;
-  position: absolute;
-  font-weight: 500;
-  top: 40%;
-  left: 14%;
-  display: block;
-}*/
 
 /*YOU WON*/
 div.js-won {
