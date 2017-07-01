@@ -7,7 +7,7 @@ var audio4 = new Audio('audio/Houston.mp3');
 audio4.play();
 
 var audio5 = new Audio('audio/starwars.mp3');
-setTimeout(function(){ audio5.play(); }, 14000);
+setTimeout(function(){ audio5.play(); }, 17000);
 
 
   //start game on SPACE PRESS
