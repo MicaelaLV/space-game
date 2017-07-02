@@ -52,13 +52,17 @@ The game is now available on computer screens. The commands implemented are the 
 
 ## Unsolved problems
 
-- [ ] Responsiveness for small and medium screens.
+- [ ] Check why on the win screen the play again button redirects to the local file instead of the url
+- [ ] Responsiveness for small and medium screens
 - [ ] Refactor code to make it more efficient
 - [ ] Clean the unused part of the code
+- [ ] Fix volume levels on all audios implementations
+- [ ] Stop the star wars start audio if the presentation gets skipped
 
 
 ## Future implementations
 
 - [ ] Implement Levels
 - [ ] Make the animations work more smoothly
-- [ ] Redo the win/loose screens
+- [ ] Implement gifs for the win/loose screens
+- [ ] Music on background of the Game with on off selector
