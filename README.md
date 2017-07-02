@@ -12,10 +12,16 @@ I've really enjoyed building up the animations and the sounds that are in the ga
 ## Technologies Used
 
 ### CODE:
-HTML5 - CSS3 - GETSKELETON(to be implemented in the next refactorings) - ANIMATE CSS (used for the some texts movements) - JAVASCRIPT - JQUERY.
+- HTML5
+- CSS3
+- GETSKELETON (to be implemented in the next refactorings)
+- ANIMATE CSS (used for the some texts movements)
+- JAVASCRIPT
+- JQUERY.
 
 ### DESIGN:
-SKETCH - ZEPLIN
+- SKETCH
+- ZEPLIN
 
 
 ## Approach taken
@@ -26,22 +32,22 @@ Initially I wanted the bugs to appear slowly in groups of odd numbers but as I d
 
 ## Features Built
 
-Intro page with audios and animations
-Bugs to be killed within a countdown
-Score of killed bugs ---- +100 points per bugs
-Timer countdown ---- 30 seconds
-Sounds on killing
-Game Over + start again button screen
-I win + start again button screen
+- Intro page with audios and animations
+- Bugs to be killed within a countdown
+- Score of killed bugs ---- +100 points per bugs
+- Timer countdown ---- 30 seconds
+- Sounds on killing
+- Game Over + start again button screen
+- I win + start again button screen
 
 
 ## Installation Instructions
 
 The game is now available on computer screens. The commands implemented are the following:
 
-PRESS SPACE to start game and pause music
+- PRESS SPACE to start game and pause music
 
-CLICK ON BUG for killing
+- CLICK ON BUG for killing
 
 
 ## Unsolved problems
