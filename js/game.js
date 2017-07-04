@@ -20,7 +20,7 @@ function Game() {
 this.addBugs();
 this.bugsCollection[0].animateBug($('.js-bug'));
 
-  for(var i = 0; i < 45; i++){
+  for(var i = 0; i < 35; i++){
     Math.floor(Math.random() * ((10-2)+1) + 2);
     Math.floor(Math.random() * 1 + 2);
     this.addBugs(i);
@@ -127,7 +127,7 @@ Game.prototype.catchBugs = function(){
 
 
 Game.prototype.gameOver = function() {
-  if (game.bugsKilled === 4600) {
+  if (game.bugsKilled === 3600) {
     $('#js-game-container').hide();
     $('.js-kills-score').hide();
     $('.js-timing').hide();
