@@ -1,0 +1,193 @@
+// .bg-wrapper {
+//   overflow: hidden;
+// }
+
+// .clients--logo {
+//   opacity: 1;
+//   transition: opacity 400ms ease-out;
+//   user-select: none;
+
+//   &.fade-out {
+//     opacity: 0;
+//   }
+// }
+
+// .btn,
+// .link {
+//   &.cmp-btn-scroll-to {
+//     &,
+//     &:active,
+//     &:focus {
+//       border: 0;
+//       outline: 0;
+//     }
+//   }
+// }
+
+
+// .jarallax {
+//   height: 100%;
+//   position: relative;
+//   z-index: 0;
+// }
+
+// .jarallax > .jarallax-img {
+//   font-family: 'object-fit: cover;';
+//   height: 100%;
+//   left: 0;
+//   object-fit: cover;
+//   position: absolute;
+//   top: 0;
+//   width: 100%;
+//   z-index: -1;
+// }
+
+// .section {
+//   color: white;
+//   margin: 0 auto;
+
+//   .bg-wrapper {
+//     background-position: center;
+//     background-repeat: no-repeat;
+//     background-size: cover;
+//     height: 100%;
+//     width: 100%;
+
+//     img {
+//       width: 100%;
+//     }
+//   }
+
+//   .content-wrapper {
+//     height: 100%;
+//     margin: 0 auto;
+//     max-width: calc(1140px + (#{map-get($common, padding-left-desktop)} * 2));
+//     padding-bottom: map-get($common, padding-bottom-mobile);
+//     padding-left: map-get($common, padding-left-mobile);
+//     padding-right: map-get($common, padding-right-mobile);
+//     // padding-top: map-get($navbar, height--mobile--compacted) * 2;
+//     padding-top: map-get($navbar, height--mobile--compacted);
+//     position: relative;
+//     width: 100%;
+//     z-index: 1;
+
+//     @include mq($from: desktop-xs) {
+//       padding-bottom: map-get($common, padding-bottom-desktop);
+//       padding-left: map-get($common, padding-left-desktop);
+//       padding-right: map-get($common, padding-right-desktop);
+//       // padding-top: map-get($navbar, height--desktop--compacted) * 2;
+//       padding-top: map-get($navbar, height--desktop--compacted);
+//     }
+
+//     &.left {
+//       @include mq($from: desktop-md) {
+//         margin: 0;
+//       }
+//     }
+
+//   }
+// }
+
+// .hide-on-mobile {
+//   display: none;
+//   pointer-events: none;
+
+//   @include mq($from: tablet) {
+//     display: initial;
+//     pointer-events: auto;
+//   }
+// }
+
+// .hide-from-tablet {
+//   display: flex;
+//   pointer-events: auto;
+//   position: relative;
+
+//   @include mq($from: tablet) {
+//     display: none !important;
+//     pointer-events: none;
+//   }
+// }
+
+// .hide-on-desktop {
+//   display: initial;
+//   pointer-events: auto;
+
+//   @include mq($from: desktop-xs) {
+//     display: none;
+//     pointer-events: none;
+//   }
+// }
+
+// .hidden {
+//   opacity: 0;
+//   pointer-events: none;
+//   position: absolute;
+//   visibility: hidden;
+//   transition: visibility 0s linear 300ms, opacity 300ms;
+//   z-index: -1;
+// }
+
+// //           $General Styles             \\
+// // ______________________________________//
+// body {
+//   // background-color: map-get($app, blue);
+//   background-color: transparent;
+//   font-family      : 'Anton', sans-serif;
+//   transition: background-color 300ms $ease-principle;
+//   will-change: background-color;
+// }
+
+
+// .back-layer--menu {
+//   background-color: rgba($black, .45);
+//   bottom: 0;
+//   height: 100%;
+//   left: 0;
+//   opacity: 0;
+//   pointer-events: none;
+//   position: fixed;
+//   right: 0;
+//   top: 0;
+//   transition: opacity 300ms $ease-principle;
+//   user-select: none;
+//   visibility: hidden;
+//   width: 100%;
+//   will-change: opacity;
+//   z-index: 400;
+
+//   &.is-active {
+//     background-color: rgba(#021B23, .5);
+//     opacity: 1;
+//     pointer-events: auto;
+//     transition: opacity 300ms $ease-principle;
+//     visibility: visible;
+//     will-change: opacity;
+
+//     @include mq($from: desktop-xs) {
+//       opacity: 1;
+//       pointer-events: none;
+//       visibility: visible;
+//     }
+//   }
+// }
+
+// .pjax-content {
+//   opacity: 0;
+//   transition: opacity 300ms $ease-principle;
+//   will-change: opacity;
+
+//   &.hidden,
+//   &.fade-out {
+//     opacity: 0;
+//   }
+
+//   &.visible,
+//   &.fade-in {
+//     opacity: 1;
+//   }
+
+//   &.hidden {
+//     opacity: 0;
+//   }
+// }

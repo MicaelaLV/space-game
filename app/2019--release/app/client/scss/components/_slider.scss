@@ -1,0 +1,171 @@
+.slider-wrapper {
+  height: 100px;
+  margin: 0 auto;
+  margin-bottom: 40px;
+  margin-top: 20px;
+  overflow: hidden;
+  padding: 16px 0;
+  position: relative;
+  width: 100%;
+  z-index: 1;
+
+  @include mq ($from: tablet) {
+    height: 200px;
+    margin-bottom: 120px;
+  }
+
+  &.slider--header {
+    height: auto;
+    margin-bottom: 0;
+    padding: 0;
+
+    .slide {
+      margin-right: 0;
+      overflow: hidden;
+    }
+
+    .slider__navigation-wrapper {
+      bottom: 50px;
+      display: inline-block;
+      height: auto;
+      left: 50%;
+      max-width: 1140px;
+      opacity: .3;
+      padding-left: 15px;
+      padding-right: 15px;
+      position: absolute;
+      transform: translate(-50%, 0);
+      width: 100%;
+      z-index: 2;
+
+      @include mq($from: container) {
+        padding-left: 0;
+        padding-right: 0;
+      }
+
+      .slider__btn {
+        bottom: auto;
+        display: inline-block;
+        left: auto;
+        position: relative;
+        right: auto;
+        top: auto;
+        transform: none;
+
+        button {
+          padding: 0;
+        }
+      }
+    }
+  }
+
+  .slides-list {
+    display: -webkit-box;
+    height: 100%;
+    justify-content: flex-start;
+    position: relative;
+    transition-property: transform;
+    width: 100%;
+    z-index: 1;
+
+    .slide {
+      flex-shrink: 0;
+      height: 100%;
+      position: relative;
+      transition-property: transform;
+      width: 100%;
+
+      @include mq ($until: nexus7) {
+        z-index: 0; // negative z-index to solve issue on mobile ios about images overlapping items in the slider header
+      }
+    }
+  }
+
+  .slider__btn {
+    cursor: pointer;
+    height: 50px;
+    opacity: 1;
+    position: absolute;
+    right: 0;
+    text-align: right;
+    top: -50px;
+    transition: opacity 300ms $ease-principle;
+    width: auto;
+    will-change: opacity;
+    z-index: 10;
+
+    &:hover {
+      opacity: .65;
+    }
+
+    &.slider__btn--prev {
+      margin-right: 20px;
+      transform: translateX(-20px);
+    }
+
+    &.slider__btn--next {
+      transform: translateX(20px);
+    }
+  }
+}
+
+.slide {
+  &.hidden {
+    display: none;
+    pointer-events: none;
+    user-select: none;
+    visibility: hidden;
+  }
+}
+
+.slider-wrapper {
+  position: relative;
+  // border: 1px solid red;
+  &.slider--vertical {
+    // border: 2px solid yellow;
+    height: 100vh;
+    margin: 0 auto;
+    padding: 0;
+    width: 100%;
+
+    .slides-list {
+      flex-direction: column;
+      margin-bottom: 0;
+    }
+
+    .slide {
+      // border: 3px solid cyan;
+      height: 100%;
+      width: 100%;
+
+      .section {
+        height: 100vh;
+      }
+    }
+
+    .slider__navigation-wrapper {
+      flex-direction: column;
+      height: auto;
+      position: absolute;
+      right: 16px;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 15px;
+      z-index: 1;
+
+      .swiper-pagination-bullet {
+        background: rgba(white, .07);
+        border-radius: 50%;
+        cursor: pointer;
+        display: inline-block;
+        height: 12px;
+        transform: background 300ms ease-out;
+        width: 12px;
+      }
+
+      .swiper-pagination-bullet-active {
+        background: rgba(white, .3);
+      }
+    }
+  }
+}

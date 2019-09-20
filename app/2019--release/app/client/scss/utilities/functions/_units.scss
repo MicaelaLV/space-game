@@ -1,0 +1,72 @@
+
+//            $UNITS                  \\
+// ___________________________________//
+
+
+// Percent-to-numbers //
+// ------------------ //
+@function percent-to-number($val) {
+  @return $val / 100;
+}
+
+
+// Returns a number without unit //
+// ----------------------------- //
+
+// E.g. 30px -> 30
+
+@function strip-unit($value) {
+  @return $value / ($value * 0 + 1);
+}
+// @param value {String}
+// @returns
+//   <Number>
+
+
+// Calculate em values //
+// ------------------- //
+
+@function em($value, $main-font-size: 16px) {
+  @if strip-unit($value) == 0 {
+    @return strip-unit($value);
+  }
+
+  @else if unitless($value) {
+    @warn 'Assuming #{$value} to be in pixels, attempting to convert it into pixels.';
+    @return em($value + 0); // That may fail.
+  }
+
+  // If the value is already in em, then do nothing and return the same value :)
+  @else if unit($value) == em {
+    @return $value;
+  }
+  @return ($value / $main-font-size) * 1em;
+}
+
+
+
+@function rem ($value, $main-font-size: 16px) {
+
+  @if strip-unit($value) == 0 {
+    @return strip-unit($value);
+  }
+
+  @else if unitless($value) {
+    @warn 'Assuming #{$value} to be in pixels, attempting to convert it into pixels.';
+    @return rem($value + 0); // That may fail.
+  }
+
+  @else if unit($value) == rem {
+    @return $value;
+  }
+
+  @return ($value / $main-font-size) * 1rem;
+}
+
+
+@function get-vw($breakpoint, $size) {
+  $screen-width: map-get($mq-breakpoints, $breakpoint);
+
+  $vw-context: ($screen-width * .01);
+  @return ($size / $vw-context) * 1vw;
+}

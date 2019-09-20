@@ -13,69 +13,6 @@ html, body { padding: 0;margin: 0; height: 100%; overflow: hidden}
 }
 
 
-/*----------- Stars animation */
-@keyframes move-twink-back {
-    from {background-position:0 0;}
-    to {background-position:-10000px 5000px;}
-}
-@-webkit-keyframes move-twink-back {
-    from {background-position:0 0;}
-    to {background-position:-10000px 5000px;}
-}
-@-moz-keyframes move-twink-back {
-    from {background-position:0 0;}
-    to {background-position:-10000px 5000px;}
-}
-@-ms-keyframes move-twink-back {
-    from {background-position:0 0;}
-    to {background-position:-10000px 5000px;}
-}
-
-@keyframes move-clouds-back {
-    from {background-position:0 0;}
-    to {background-position:10000px 0;}
-}
-@-webkit-keyframes move-clouds-back {
-    from {background-position:0 0;}
-    to {background-position:10000px 0;}
-}
-@-moz-keyframes move-clouds-back {
-    from {background-position:0 0;}
-    to {background-position:10000px 0;}
-}
-@-ms-keyframes move-clouds-back {
-    from {background-position: 0;}
-    to {background-position:10000px 0;}
-}
-
-.stars, .twinkling, .clouds {
-  position:absolute;
-  top:0;
-  left:0;
-  right:0;
-  bottom:0;
-  width:100%;
-  height:100%;
-  display:block;
-}
-
-.stars {
-  background:#01132a url(http://img4.hostingpics.net/pics/144421stars.png) repeat top center;
-  z-index:0;
-}
-
-.twinkling{
-  background:transparent url(http://img4.hostingpics.net/pics/352884twinkling.png) repeat top center;
-  z-index:1;
-
-  -moz-animation:move-twink-back 150s linear infinite;
-  -ms-animation:move-twink-back 150s linear infinite;
-  -o-animation:move-twink-back 150s linear infinite;
-  -webkit-animation:move-twink-back 150s linear infinite;
-  animation:move-twink-back 150s linear infinite;
-}
-
-
 /* ---------- Body container */
 .main-container {
   color: white;
@@ -298,38 +235,38 @@ div#js-game-container:hover {
 /* ----------- Bugs Controls */
 
 /* BUGS SHOWING */
-.js-bug {
-  height: 200px;
-  width: 200px;
-  position: absolute;
-  background: url('../img/bugs/alien200.png')no-repeat center;
-  background-size: contain;
-}
+// .js-bug {
+//   height: 200px;
+//   width: 200px;
+//   position: absolute;
+//   background: url('../img/bugs/alien200.png')no-repeat center;
+//   background-size: contain;
+// }
 
-.js-bug.small {
-  height: 100px;
-  width:100px;
-  position: absolute;
-  background: url('../img/bugs/alien100.png')no-repeat center;
-  background-size: contain;
-}
+// .js-bug.small {
+//   height: 100px;
+//   width:100px;
+//   position: absolute;
+//   background: url('../img/bugs/alien100.png')no-repeat center;
+//   background-size: contain;
+// }
 
-.js-bug.medium {
-  height: 150px;
-  width:150px;
-  position: absolute;
-  background: url('../img/bugs/alien150.png')no-repeat center;
-  background-size: contain;
-}
+// .js-bug.medium {
+//   height: 150px;
+//   width:150px;
+//   position: absolute;
+//   background: url('../img/bugs/alien150.png')no-repeat center;
+//   background-size: contain;
+// }
 
-/* BUGS KILLED */
-.js-killed {
-  height: 200px;
-  width: 200px;
-  position: absolute;
-  background: url('../img/bugs/spot150.png')no-repeat center;
-  /*opacity: 0.7;*/
-}
+// /* BUGS KILLED */
+// .js-killed {
+//   height: 200px;
+//   width: 200px;
+//   position: absolute;
+//   background: url('../img/bugs/spot150.png')no-repeat center;
+//   /*opacity: 0.7;*/
+// }
 
 
 /* ALIEN KILLS SCORE */
@@ -366,24 +303,24 @@ div.js-alien-kills{
 }
 
 /* GAME OVER */
-div.js-game-over {
-  height: 100vw;
-  width: 100vw;
-  position: relative;
-  bottom: 350px;
-  background: url('../img/gameover.png')no-repeat center;
-  background-color: #000;
-  display:none;
-  }
+// div.js-game-over {
+//   height: 100vw;
+//   width: 100vw;
+//   position: relative;
+//   bottom: 350px;
+//   background: url('../img/gameover.png')no-repeat center;
+//   background-color: #000;
+//   display:none;
+// }
 
-  .button.play-again {
-    position: absolute;
-    top: 60%;
-    left: 45%;
-    background-color: white;
-    color: black;
-    font-weight: bold;
-  }
+// .button.play-again {
+//   position: absolute;
+//   top: 60%;
+//   left: 45%;
+//   background-color: white;
+//   color: black;
+//   font-weight: bold;
+// }
 
 
 /*YOU WON*/

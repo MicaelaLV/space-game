@@ -1,0 +1,183 @@
+
+//            $HEADINGS               \\
+// ___________________________________//
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family    : map-get($font-family, heading);
+  font-weight    : 400;
+  text-rendering : optimizelegibility;
+}
+
+h3 {
+  font-weight: 600;
+}
+
+@each $heading-type, $font-size in
+(h1, 32)
+(h2, 24)
+(h3, 20)
+(h4, 16)
+(h5, 14)
+(h6, 12) {
+  #{$heading-type},
+  .heading-#{$heading-type} {
+
+    $line-height : ($base__line / $font-size);
+    @include x-rem(font-size, $font-size);
+    margin-bottom: strip-unit($line-height) * 1em;
+
+    @if $font-size > $base__line {
+      $line-height-x2: $line-height * 2;
+      line-height: strip-unit($line-height-x2) * 1em;
+    } @else {
+      line-height: strip-unit($line-height) * 1em;
+    }
+  }
+}
+
+
+//       $PARAGRAPHS and $LIST        \\
+// ___________________________________//
+p {
+  @include x-rem(font-size, $base__font-size);
+  color: inherit;
+  font-weight   : 400;
+  line-height   : $base__line-height;
+  // margin-bottom : $base__line-height;
+}
+
+
+small {
+  @include x-rem(font-size, 12);
+}
+
+
+ol,
+ul,
+dl,
+dd,
+address {
+  // margin-bottom : $base__line-height * 10px;
+}
+
+dt {
+  font-weight : bold;
+}
+
+
+//            $BLOCKQUOTE             \\
+// ___________________________________//
+//*Use always a paragraph inside the blockquote tags
+blockquote  {
+  border-left   : 10px solid map-get($app, text-color);
+  font-family   : $font--secondary;
+  font-style    : normal;
+  margin        : 0 0 $base__line-height * 1px 0;
+  padding-left  : em(15px);
+  padding-right : em(15px);
+
+  p {
+    @include x-rem(font-size, 18);
+    color      : lighten(map-get($app, text-color), 15%);
+    font-style : italic;
+
+    &:before,
+    &:after {
+      content : '';
+    }
+  }
+
+  .quote-info {
+    text-align: right;
+  }
+}
+
+
+q {
+  font-style : italic;
+  quotes     : none;
+
+  &:before,
+  &:after {
+    content : '';
+  }
+}
+
+
+cite {
+  font-style : normal;
+}
+
+
+//            $TEXT-LEVEL             \\
+// ___________________________________//
+
+hr {
+  border     : 0;
+  border-top : 1px solid map-get($app, text-color);
+  clear      : both;
+  display    : block;
+  height     : 1px;
+  margin     : $base__line-height * 2 0;
+  padding    : 0;
+}
+
+abbr {
+  border-bottom : 1px dotted lighten(map-get($app, text-color), 15%);
+  cursor        : help;
+}
+
+b,
+strong {
+  font-weight : bold;
+}
+
+dfn {
+  font-style : italic;
+}
+
+ins {
+  background-color : lighten(map-get($app, text-color), 75%);
+  color            : darken(map-get($app, text-color), 20%);
+  text-decoration  : none;
+}
+
+mark {
+  background-color : map-get($css-colors, yellow);
+  color            : darken(map-get($app, text-color), 20%);
+}
+
+pre,
+code,
+kbd,
+samp {
+  @include x-rem(font-size, 14);
+  font-family : $font--code;
+  line-height : $base__line-height;
+}
+
+pre {
+  white-space : pre-wrap;
+  word-wrap   : break-word;
+}
+
+sub,
+sup {
+  @include x-rem(font-size, 12);
+  line-height    : 0;
+  position       : relative;
+  vertical-align : $base__line-height;
+}
+
+sup {
+  top : -.5em;
+}
+
+sub {
+  bottom : -.25em;
+}

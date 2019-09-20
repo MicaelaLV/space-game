@@ -1,0 +1,178 @@
+.navbar-wrapper {
+  .mobile-menu-wrapper {
+    color: $white;
+    // height: calc(100vh - #{map-get($navbar, height--mobile--compacted)});
+    height: 100vh;
+    left: 0;
+    position: fixed;
+    top: -60px;
+    transform: translate(100vw, map-get($navbar, height--mobile--compacted));
+    transition: height 300ms $ease-principle, transform 500ms $ease-principle 300ms;
+    width: 100vw;
+  
+    // .opacity-wrapper {
+    //   // background-image: linear-gradient(to right, rgba(70, 69, 83, 0.05), rgba(34, 33, 41, 0.86));
+    // }
+  
+    &.is-active {
+      transform: translate(0, map-get($navbar, height--mobile--compacted));
+      background-image: linear-gradient(to right, rgba(70, 69, 83, 0.05), rgba(34, 33, 41, 0.86));
+  
+      @include mq($from: desktop-xs) {
+        transform: translate(75vw, map-get($navbar, height--mobile--compacted));
+      }
+    }
+
+    &.work-page {
+      background-color: map-get($app, dark-blue);
+
+      .opacity-wrapper {
+        background-image: none;
+        opacity: 1;
+      }
+    }
+  
+    a {
+      color: $white;
+    }
+  
+    .list--mobile-menu {
+      height: 75vh;
+      margin: 0 auto;
+      margin-top: 100px;
+      padding-bottom: 50px;
+      overflow: auto;
+  
+      @include mq($from: desktop-xs) {
+        // height: 100vh;
+        margin-top: 120px;
+      }
+  
+      li {
+        @include x-rem(font-size, 24px);
+        @include x-rem(line-height, 30px);
+        font-weight: 500;
+        padding-bottom: 30px;
+        padding-left: 20px;
+        padding-right: 20px;
+        padding-top: 15px;
+  
+        @include mq($from: desktop-xs) {
+          padding-left: 32px;
+          padding-right: 32px;
+          padding-bottom: 10px;
+        }
+  
+        &:last-child {
+          // padding-bottom: 100px;
+        }
+  
+        &.list--accordion {
+          padding-left: 0;
+          padding-right: 0;
+          padding-bottom: 0;
+  
+          .input-wrapper {
+            padding-left: 20px;
+            padding-right: 20px;
+  
+            @include mq($from: desktop-xs) {
+              padding-left: 32px;
+              padding-right: 32px;
+            }
+  
+            .input-label {
+              padding-bottom: 0;
+              transition: padding-bottom 200ms ease-out, color 200ms ease-out;
+  
+              &.opened {
+                // color: map-get($app, orange);
+                // padding-bottom: 15px;
+              }
+            }
+          }
+        }
+      
+        &.accordion__li {
+          padding: 0 20px 0 30px;
+    
+          @include mq($from: desktop-xs) {
+            padding: 0 32px;
+          }
+        }
+      }
+    }
+  
+    .socials-wrapper {
+      align-items: flex-end;
+      bottom: 20px;
+      display: flex;
+      height: 50px;
+      opacity: 1;
+      padding: 0 20px;
+      position: absolute;
+      transition: visibility 0s linear 0s, opacity 300ms;
+      width: 100vw;
+
+      &.hidden {
+        opacity: 0;
+        pointer-events: none;
+        position: absolute;
+        visibility: hidden; 
+        transition: visibility 0s linear 300ms, opacity 300ms;
+        z-index: -1;
+      }
+  
+      @include mq($from: desktop-xs) {
+        bottom: 40px;
+        left: -58%;
+      }
+  
+      .social--link {
+        align-items: center;
+        cursor: pointer;
+        display: flex;
+        height: 20px;
+        width: 15%;
+  
+        @include mq($from: desktop-xs) {
+          height: 25px;
+          width: 9%;
+        }
+  
+        .icon {
+          background-position: center; 
+          background-repeat: no-repeat;
+          background-size: contain;
+          opacity: 1;
+          height: 80%;
+          max-height: 40px;
+          width: 80%;
+        }
+      }
+    }
+  }
+}
+
+// .fp-viewing-0 {
+//   .mobile-menu-wrapper {
+//     height: calc(100vh - #{map-get($navbar, height--mobile)});
+//     transform: translate(100vw, map-get($navbar, height--mobile));
+
+//     .opacity-wrapper {
+//       background-image: linear-gradient(to right, rgba(70, 69, 83, 0.05), rgba(34, 33, 41, 0.86));
+//     }
+
+//     &.is-active {
+//       transform: translate(65vw, map-get($navbar, height--mobile));
+//     }
+
+//     &.work-page {
+//       background-color: map-get($app, dark-blue);
+
+//       .opacity-wrapper {
+//         background-image: none;
+//       }
+//     }
+//   }
+// }

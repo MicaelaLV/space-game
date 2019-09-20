@@ -1,0 +1,143 @@
+.list--accordion {
+  // height: 100%;
+
+  .input-wrapper {
+
+    .input-label {
+      align-items: center;
+      cursor: pointer;
+      display: flex;
+      justify-content: baseline;
+      margin-bottom: 0;
+
+      .text {
+        @include x-rem(font-size, 24px);
+        @include x-rem(line-height, 30px);
+        font-weight: 500;
+      }
+
+      .symbol {
+        margin-left: 5px;
+        transform: rotate(-90deg);
+        transition: transform 300ms $ease-principle;
+
+        .icon {
+          svg {
+            #MAIN-MENU {
+              fill: #9B9B9B;
+              transition: fill 300ms ease-out;
+            }
+          }
+        }
+
+        &.expanded {
+          transform: rotate(0);
+          margin-bottom: 3px;
+
+          .icon {
+            svg {
+              #MAIN-MENU {
+                // fill: map-get($app, orange);
+              }
+            }
+          }
+        }
+      }
+
+
+      [type='checkbox'] {
+        position: absolute; // Remove inputs from document flow
+        visibility: hidden; // Make inputs not-clickable
+      }
+    }
+  }
+}
+
+
+.accordion__content-wrapper {
+  // background-color: map-get($app, blue--dark);
+  height: 0;
+  opacity: 0;
+  pointer-events: none;
+  transform: scale(1) rotateX(-60deg);
+  transition: height 350ms $ease-principle, opacity 200ms $ease-principle, transform 310ms $ease-principle;
+  user-select: none;
+
+  .accordion__content {
+    padding: 0;
+
+    .accordion__li {
+      padding: 0 20px 0 30px;
+
+      @include mq($from: desktop-xs) {
+        padding: 0 32px;
+      }
+    }
+
+    .address-wrapper {
+      margin-bottom: 5px;
+    }
+
+    .title, 
+    .subtitle {
+      @include x-rem(font-size, 18px);
+      @include x-rem(line-height, 26px);
+      font-weight: 500;
+      margin-bottom: 8px;
+    }
+
+    .subtitle {
+      margin-bottom: 0;
+    }
+
+    .description {
+      @include mq($from: desktop-xs) {
+        max-width: 20%;
+      }
+    }
+
+    .contact__links {
+      @include x-rem(font-size, 16px);
+      @include x-rem(line-height, 26px);
+      font-weight: 500;
+      display: block;
+      margin-bottom: 0;
+    }
+
+    .link__name {
+      display: block;
+      font-weight: 500;
+      margin-bottom: 15px;
+    }
+
+    .link__description {
+      font-weight: 300;
+      opacity: .6;
+    }
+
+    .link__name,
+    .link__description {
+      @include x-rem(font-size, 16px);
+      @include x-rem(line-height, 22px);
+      color: $white;
+    }
+  }
+
+
+  &.visible {
+    height: auto;
+    opacity: 1;
+    padding: 15px 0 0 10px;
+    pointer-events: auto;
+    transform: scale(1);
+    user-select: auto;
+
+    &.disabled {
+      height: 0;
+      opacity: 0;
+      pointer-events: none;
+      transform: scale(1) rotateX(-60deg);
+      user-select: none;
+    }
+  }
+}

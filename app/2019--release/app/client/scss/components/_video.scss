@@ -1,0 +1,40 @@
+
+
+// <button type="button" class="plyr__control plyr__control--overlaid plyr__tab-focus" data-plyr="play" aria-label="Play"><svg role="presentation" focusable="false"><use xlink:href="#plyr-play"></use></svg><span class="plyr__sr-only">Play</span></button>
+
+.section {
+  .plyr__controls {
+    display: none;
+    pointer-events: none;
+    visibility: hidden;
+  }
+
+  .plyr__control {
+    &[data-plyr='play'] {
+      display: none;
+      pointer-events: none;
+      visibility: hidden;
+    }
+  }
+
+  .plyr--video {
+    height: 100%;
+    width: 100%;
+  }
+}
+
+.banner-bn-video {
+  position: relative;
+
+  .bg-wrapper {
+    background-image: none;
+    height: auto;
+
+    img {
+      height: 100%;
+      object-fit: contain;
+      object-position: left bottom;
+      width: 100%;
+    }
+  }
+}

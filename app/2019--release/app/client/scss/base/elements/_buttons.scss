@@ -1,0 +1,18 @@
+
+button,
+input {
+
+  &,
+  &[type='button'] {
+    background-color: transparent;
+    cursor: pointer;
+  }
+
+  &,
+  &:active,
+  &:focus,
+  &:hover {
+    // border: 0;
+    // outline: 0;
+  }
+}

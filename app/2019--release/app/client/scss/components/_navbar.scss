@@ -1,0 +1,239 @@
+.navbar-wrapper {
+  // background-color: rgba(map-get($app, blue), 1);
+  background-color: transparent;
+  left: 0;
+  opacity: 1;
+  padding-left: map-get($common, padding-left-mobile);
+  padding-right: map-get($common, padding-right-mobile);
+  position: fixed;
+  right: 0;
+  top: 0;
+  transform: translateY(-100%);
+  transition: transform 300ms ease-out, background-color 300ms $ease-principle 200ms, height 300ms $ease-principle 200ms;
+  width: 100vw;
+  z-index: 5000;
+
+  @include mq($from: desktop-lg) {
+    padding-left: map-get($common, padding-left-desktop);
+    padding-right: map-get($common, padding-right-desktop);
+  }
+
+  &.bg-enabled {
+    // background-color: rgba(map-get($app, blue), 1);
+  }
+
+  &.menu-mobile-being-shown {
+    // background-color: rgba(map-get($app, blue), 1);
+  }
+}
+
+.bg-enabled {
+  .navbar-wrapper {
+    // background-color: rgba(map-get($app, blue), 0);
+  }
+
+  .navbar {
+    height: map-get($navbar, height--mobile--compacted);
+
+    @include mq($from: desktop-xs) {
+      height: map-get($navbar, height--desktop--compacted);
+      transition: height 1s;
+    }
+  }
+}
+
+.navbar-wrapper {
+  &.dropdown-being-shown {
+    // background-color: transparent;
+    &,
+    &.navbar--top {
+      // background-color: rgba(map-get($app, blue), 1);
+      //height: map-get($navbar, height--desktop--compacted);
+      height: 330px;
+    }
+  }
+}
+
+
+.navbar {
+  display: block;
+  margin: 0 auto;
+  max-width: 1140px;
+  transition: height 300ms $ease-principle;
+  width: 100%;
+
+  &,
+  &.navbar--not-top {
+    height: map-get($navbar, height--mobile);
+
+    @include mq($from: desktop-xs) {
+      height: map-get($navbar, height--desktop);
+
+    }
+  }
+
+  &.navbar--top {
+    height: map-get($navbar, height--mobile);
+
+    @include mq($from: desktop-xs) {
+      height: map-get($navbar, height--desktop);
+    }
+
+    // &.bg-enabled {
+    //   .dropdown-being-shown {
+    //     //height: map-get($navbar, height--desktop--compacted);
+    //   }
+    // }
+  }
+
+  &.hidden {
+    opacity: 0;
+  }
+
+
+  .list--navbar {
+    align-items: center;
+    display: flex;
+    height: 100%;
+    justify-content: space-between;
+    margin: 0;
+    position: relative;
+    width: 100%;
+    z-index: 2;
+
+    li {
+      display: inline-block;
+
+      button {
+        &.being-hovered {
+          .symbol {
+            .icon {
+              svg {
+                transform: rotate(180deg);
+
+                #MAIN-MENU {
+                  // fill: map-get($app, orange);
+                }
+              }
+            }
+          }
+
+          .text {
+            // color: map-get($app, orange-text);
+          }
+        }
+      }
+
+      &:first-child {
+
+        @include mq($from: desktop-xs) {
+          width: 25%;
+        }
+
+        a {
+          cursor: pointer;
+          height: auto;
+          margin-top: 10px;
+        }
+      }
+
+      &.is-dropdown {
+        cursor: pointer;
+
+        .main-link {
+          &,
+          &:active,
+          &:focus,
+          &:hover {
+            border: 0;
+            outline: 0;
+          }
+        }
+
+        .symbol {
+          left: 4px;
+          position: relative;
+          top: 2px;
+
+          .icon {
+            svg {
+              transform: rotate(0deg);
+              transition: transform 300ms $ease-principle;
+
+              #MAIN-MENU {
+                fill: #9B9B9B;
+                transition: fill 300ms ease-out;
+              }
+            }
+          }
+        }
+      }
+
+      // &:last-child {
+      //   margin-left: 30px;
+      // }
+
+      &.hide-on-mobile {
+        display: none;
+        pointer-events: none;
+
+        @include mq($from: desktop-xs) {
+          display: initial;
+          pointer-events: auto;
+
+          .btn--secondary {
+            margin: 0;
+          }
+        }
+      }
+
+      &.hide-on-desktop {
+        display: initial;
+        pointer-events: auto;
+
+        @include mq($from: desktop-xs) {
+          display: none;
+          pointer-events: none;
+        }
+      }
+    }
+
+    .logo-wrapper {
+      display: inline-block;
+      width: map-get($navbar, logo-width--mobile);
+
+      @include mq($from: desktop-xs) {
+        width: map-get($navbar, logo-width--desktop);
+      }
+    }
+
+    .text {
+      @include x-rem(font-size, 14px);
+      color: map-get($app, $white);
+      display: inline-block;
+      font-family: 'Avenir LT Std 85 Heavy';
+      font-weight: 700;
+      height : 100%;
+      line-height: map-get($navbar, height--mobile);
+      text-align: center;
+      vertical-align: middle;
+
+      &:hover {
+        text-decoration: none;
+      }
+
+      &.color-active {
+        // color: map-get($app, orange-text);
+      }
+    }
+  }
+}
+
+
+body {
+  &.loaded {
+    .navbar-wrapper {
+      transform: translateY(0);
+    }
+  }
+}

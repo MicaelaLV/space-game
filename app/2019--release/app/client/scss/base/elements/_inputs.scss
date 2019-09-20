@@ -1,0 +1,18 @@
+
+// This animation remove the annoying yellow color on Chrome for the autofill content
+
+@keyframes autofill {
+  to {
+    background: transparent;
+    color: map-get($app, text-color);
+  }
+}
+
+input,
+select,
+textarea {
+  &:-webkit-autofill {
+    animation-fill-mode: both;
+    animation-name: autofill;
+  }
+}

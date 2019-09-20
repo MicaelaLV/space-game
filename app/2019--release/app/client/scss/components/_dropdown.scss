@@ -1,0 +1,134 @@
+.dropdown-list-wrapper {
+  //background-color: rgba(map-get($app, blue), 1);
+  color: $white;
+  left: 0;
+  padding-left: 0;
+  padding-right: 50px;
+  pointer-events: none;
+  position: fixed;
+  right: 0;
+  top: 0;
+  transition: transform 1500ms $ease-principle 100ms;
+  width: 100vw;
+  z-index: 0;
+  user-select: none;
+  transform: translateY(map-get($navbar, height--mobile--compacted));
+
+  @include mq($from: desktop-xs) {
+    top: 60px;
+    transform: translateY(map-get($navbar, height--desktop--compacted));
+  }
+
+  @include mq($from: desktop-md) {
+    padding-left: map-get($common, padding-left-desktop);
+    padding-right: map-get($common, padding-right-desktop);
+  }
+
+  &.is-visible {
+    pointer-events: auto;
+    // transform: translateY(map-get($navbar, height--mobile--compacted));
+
+    @include mq($from: desktop-xs) {
+      // transform: translateY(map-get($navbar, height--desktop--compacted));
+    }
+
+    .list--dropdown {
+      li {
+
+        &.slideInRight {
+          opacity: 1;
+          transform: translateX(20px);
+          //transform: matrix(0, 0, 0, 0, 20, 0);
+          //transform: matrix(1, 0, 0, 1, 20, 0);
+        }
+      }
+    }
+  }
+
+  .title {
+    @include x-rem(font-size, 30px);
+    @include x-rem(line-height, 55px);
+  }
+
+  .link {
+    display: inline-block;
+  }
+
+  .link__name {
+    display: block;
+    font-family: 'Avenir LT Std 65 Medium';
+    font-weight: 600;
+    margin-bottom: 15px;
+  }
+
+  .link__description {
+    font-family: 'Avenir LT Std 35 Light';
+    font-weight: 300;
+    opacity: .6;
+  }
+
+  .link__name,
+  .link__description {
+    @include x-rem(font-size, 16px);
+    @include x-rem(line-height, 22px);
+    color: $white;
+  }
+}
+
+
+.fp-viewing-0 {
+
+  .dropdown-list-wrapper {
+    &.is-visible {
+      transform: translateY(map-get($navbar, height--mobile));
+
+      @include mq($from: desktop-xs) {
+        transform: translateY(map-get($navbar, height--desktop));
+      }
+    }
+  }
+}
+
+.list--dropdown {
+  align-items: flex-start;
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+  margin-bottom: 60px;
+  margin-top: 0;
+  max-width: 1140px;
+  width: 100%;
+
+  li {
+    opacity: 0;
+    padding: 5px 10px;
+    transition: opacity 200ms linear, transform 250ms linear;
+    width: susy-span(2.7);
+
+    .link__name,
+    .link__description {
+      transition: color 200ms linear;
+    }
+
+    &:hover {
+      cursor: pointer;
+
+      .link__name {
+        // color: map-get($app, orange--hover);
+      }
+
+      .link__description {
+        color: white;
+        opacity: 1;
+      }
+    }
+  }
+
+  .social-wrapper {
+    a {
+      @include mq($from: desktop-xs) {
+        margin-right: 20px;
+      }
+    }
+  }
+}

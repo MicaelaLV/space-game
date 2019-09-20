@@ -1,0 +1,166 @@
+// ======================= \\
+//      $CONFIG
+// ======================= //
+
+@charset 'UTF-8';
+
+//           $Breakpoints             \\
+// ___________________________________//
+$mq-breakpoints: (
+  mobile       : 320px,
+  iphone6      : 375px,
+  phablet      : 480px,
+  nexus7       : 603px,
+  tablet       : 768px,
+  desktop-xs   : 992px,
+  container    : 1141px,
+  desktop-sm   : 1024px,
+  desktop-md   : 1200px,
+  desktop-lg   : 1440px,
+  large-screen : 1900px
+);
+
+
+//           $Susy                    \\
+// ___________________________________//
+$susy: (
+  'columns': susy-repeat(12),
+  // 'gutters': .45,
+  'gutters': 30px,
+  'spread': 'narrow',
+  'container-spread': 'narrow',
+  'svg-grid-colors': hsl(180, 50%, 80%)
+);
+
+
+//             $Fonts                 \\
+// ___________________________________//
+
+// IMPORT GOOGLE FONTS
+$anton-font__url: 'https://fonts.googleapis.com/css?family=Anton';
+@import url($anton-font__url);
+
+$karla-font__url: 'https://fonts.googleapis.com/css?family=Karla:400,400i';
+@import url($karla-font__url);
+
+// Assign the fonts to our framework
+
+$anton-font__name   : 'Anton' !default;
+$karla-font__name   : 'Karla' !default;
+
+$font--code          : 'Courier New', monospace;
+
+$font--primary       : $anton-font__name, sans-serif;
+$font--secondary     : $karla-font__name, sans-serif;
+$base__font          : $font--primary;
+$base__font--heading : $font--primary;
+
+
+//*Base values
+$base__line                 : 24px;
+$base__font-size            : 16px;
+$base__font-size--heading   : 20px;
+$base__line-height          : ($base__line / $base__font-size);
+$base__line-height--heading : ($base__line / $base__font-size--heading);
+$base__font-weight--heading : bold;
+
+
+//           $Font Families              \\
+// ______________________________________//
+$font-family: (
+  primary   : $font--primary,
+  secondary : $font--secondary,
+  heading   : $font--primary,
+  code      : $font--code,
+) !default;
+
+
+//           $Common values              \\
+// ______________________________________//
+
+
+$common: (
+  padding-left-mobile: 15px,
+  padding-left-desktop: 40px,
+  padding-right-mobile: 15px,
+  padding-right-desktop: 40px,
+  padding-top-mobile: 0,
+  padding-top-desktop: 0,
+  padding-bottom-mobile: 80px,
+  padding-bottom-desktop: 60px
+) !default;
+
+
+//           $Navbar                     \\
+// ______________________________________//
+
+$navbar: (
+  logo-height--mobile: 60px,
+  logo-height--desktop: 68px,  // 70 instead of 68 to take dead pixels
+  logo-height--desktop--compacted: 51px,
+  height--mobile: 60px,
+  height--mobile--compacted: 60px,
+  height--desktop-first-block: 45px,
+  height--desktop-first-block--compacted: 35px,
+  height--desktop-second-block: 80px,
+  height--desktop-second-block--compacted: 51px,
+  height--desktop: 125px,
+  height--desktop--compacted: 86px,
+  width: 100%
+) !default;
+
+
+//           $Easing                     \\
+// ______________________________________//
+$ease-principle: cubic-bezier(.25, .1, .25, 1);
+
+
+//           $Menu Burger                \\
+// ______________________________________//
+$burger: (
+  padding       : 15px,
+  layer-width   : 32px,
+  layer-height  : 2px,
+  layer-spacing : 6px,
+  layer-color   : $white,
+  layer-border-radius : 4px,
+  hover-opacity : .7,
+  hover-transition-duration        : 150ms,
+  hover-transition-timing-function : $ease-principle
+) !default;
+// To use CSS filters as the hover effect instead of opacity,
+// set $burger-hover-use-filter as true and
+// change the value of $burger-hover-filter accordingly.
+$burger-hover-use-filter: false !default;
+$burger-hover-filter    : opacity(50%) !default;
+
+
+//           $Product                    \\
+// ______________________________________//
+
+$product: (
+  width--mobile: 176px,
+  width--desktop: 262px,
+  height--mobile: 277px,
+  height--desktop: 370px,
+  content-height--mobile: 230px,
+  content-height--desktop: 313px,
+  price-height--mobile: 47px,
+  price-height--desktop: 57px,
+) !default;
+
+
+
+
+//           $Text                       \\
+// ______________________________________//
+// $text-default: (
+//   mobile       : 32px,
+//   iphone6      : 37px,
+//   phablet      : 48px,
+//   tablet       : 76px,
+//   desktop-xs   : 99px,
+//   desktop-md   : 120px,
+//   desktop-lg   : 144px,
+//   large-screen : 190px
+// );

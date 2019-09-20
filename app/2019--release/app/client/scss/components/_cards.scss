@@ -1,0 +1,327 @@
+.section {
+  &.section--cards {
+    &.vertical--cards {
+
+      .content-wrapper {
+
+        &.mobile-version {
+          @include mq($from: desktop-xs) {
+            display: none;
+          }
+        }
+
+        &.desktop-version {
+          display: none;
+          padding-left: 0;
+          padding-right: 0;
+
+          @include mq($from: desktop-xs) {
+            display: flex;
+            justify-content: space-evenly;
+          }
+
+          @include mq($from: desktop-md) {
+            padding-left: 100px;
+            padding-right: 100px;
+          }
+
+          .column-left {
+            max-width: 560px;
+            width: 50%;
+
+            .text-wrapper {
+              margin-bottom: 50px;
+            }
+
+            .card {
+              max-width: 560px;
+              min-width: 500px;
+              padding: 60px;
+              width: 100%;
+
+              .card__title {
+                @include x-rem(font-size, 27px);
+                @include x-rem(line-height, 46px);
+                margin-bottom: 20px;
+              }
+            }
+          }
+
+          .cards-wrapper {
+            align-items: flex-end;
+            width: 40%;
+
+            .card {
+              max-width: 560px;
+              min-width: 500px;
+              padding: 60px;
+              width: 100%;
+
+              .card__title {
+                @include x-rem(font-size, 27px);
+                @include x-rem(line-height, 46px);
+                margin-bottom: 20px;
+              }
+
+              &:first-child {
+                margin-top: 300px;
+              }
+
+              &:last-child {
+                margin-bottom: 0;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    &.big-data--cards,
+    &.vertical--cards {
+      .content-wrapper {
+        .cards-wrapper {
+          margin-bottom: 0;
+          }
+      }
+    }
+
+    &.vertical__cards {
+
+      .content-wrapper {
+
+        .cards-wrapper {
+          margin-bottom: 20px;
+
+          .card {
+            .card__title {
+              // max-width: 200px;
+            }
+          }
+        }
+
+        .title-wrapper {
+          margin-bottom: 50px;
+
+          .title {
+            margin-bottom: 0;
+
+            @include mq($from: tablet) {
+              text-align: center;
+            }
+          }
+        }
+
+        .arrow-wrapper {
+          margin-bottom: 40px;
+        }
+      }
+    }
+
+    &.big-data--cards-w-tick {
+      .content-wrapper {
+        .cards-wrapper {
+          margin-bottom: 70px;
+
+          @include mq($from: desktop-md) {
+            justify-content: space-evenly;
+          }
+
+          .card {
+            @include mq($from: desktop-md) {
+              width: 33%;
+            }
+          }
+        }
+
+        .description {
+          @include mq($from: desktop-md) {
+            text-align: center;
+          }
+        }
+
+        .arrow-wrapper {
+          margin: 100px 0;
+          pointer-events: none;
+        }
+      }
+    }
+
+    &.big-data--cards {
+      .content-wrapper {
+        padding-top: 0;
+
+        .title-wrapper {
+          @include mq($from: desktop-md) {
+            margin-bottom: 100px;
+          }
+
+          .title {
+            @include x-rem(font-size, 30px);
+            @include x-rem(line-height, 39px);
+          }
+        }
+
+        .cards-wrapper {
+          @include mq($from: desktop-md) {
+            justify-content: space-evenly;
+          }
+
+          .card {
+            @include mq($from: desktop-md) {
+              padding: 70px 60px 40px 40px;
+              width: 40%;
+            }
+          }
+        }
+
+      }
+    }
+
+    &.vertical__customers--cards {
+      .content-wrapper {
+
+        @include mq($from: desktop-xs) {
+          padding-bottom: 0;
+          padding-top: 120px;
+        }
+
+        .title-wrapper {
+          .title {
+            padding: 0 10%;
+          }
+        }
+
+        .text-wrapper {
+          padding: 0 10%;
+          margin-bottom: 80px;
+        }
+      }
+    }
+
+
+  }
+
+}
+
+
+.card {
+  // background-color: rgba(map-get($app, blue), .05);
+  margin-bottom: 6px;
+  max-width: 560px;
+  padding: 48px 28px 28px 32px;
+  position: relative;
+  width: 100%;
+
+  @include mq($from: desktop-xs) {
+    margin-bottom: 64px;
+  }
+
+  &.card--dno {
+    @include mq($from: desktop-xs) {
+      padding: 62px 56px;
+    }
+  }
+
+  &.with-tick {
+    margin-bottom: 40px;
+    max-width: 496px;
+    width: 100%;
+  }
+
+  .card__title {
+    @include x-rem(font-size, 30px);
+    font-family: 'Heavy', sans-serif;
+    text-align: left;
+  }
+
+  &.card--image {
+    background-color: transparent;
+  }
+
+  &.just-title {
+    cursor: pointer;
+
+    .card__title {
+      @include x-rem(font-size, 22px);
+      @include x-rem(line-height, 52px);
+
+      @include mq($from: desktop-xs) {
+        @include x-rem(font-size, 30px);
+        @include x-rem(line-height, 52px);
+      }
+    }
+
+    &:hover {
+      // background-color: map-get($app, orange);
+      transition: background-color 1s linear;
+
+
+      .card__title {
+        color: $white;
+        font-family: 'Heavy', sans-serif;
+        text-align: left;
+        transition: color 600ms linear;
+      }
+    }
+  }
+
+  .card__title {
+    @include x-rem(font-size, 18px);
+    @include x-rem(line-height, 25px);
+    font-family: 'Avenir LT Std 65 Medium';
+    font-weight: 600;
+
+    @include mq($from: desktop-xs) {
+      text-align: left;
+    }
+  }
+
+  .card__description {
+    @include x-rem(font-size, 16px);
+    @include x-rem(line-height, 22px);
+    font-family: 'Avenir LT Std 55 Roman';
+    font-weight: 500;
+    margin-bottom: 15px;
+    max-width: 253px;
+
+    @include mq($from: desktop-xs) {
+      max-width: 445px;
+    }
+  }
+
+  .card__icon {
+    display: block;
+    // margin: 0 auto;
+    margin-bottom: 45px;
+    max-width: 218px;
+
+    @include mq($from: desktop-xs) {
+      margin: 0;
+      margin-bottom: 45px;
+    }
+  }
+
+  .card__tick {
+    bottom: 30px;
+    position: absolute;
+    right: -22px;
+    width: 95px;
+  }
+
+  ul {
+    // list-style: disc url('../assets/img/icon--bullet.png') inside;
+    // list-style: none;
+    margin-left: 0;
+    margin-top: 20px;
+    padding-left: 1em;
+    text-indent: -1em;
+
+    li {
+      @include x-rem(font-size, 16px);
+      @include x-rem(line-height, 22px);
+      font-family: 'Avenir LT Std 55 Roman';
+      margin-bottom: 20px;
+    }
+
+  }
+}

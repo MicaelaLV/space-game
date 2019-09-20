@@ -1,0 +1,96 @@
+
+//            $Customs                \\
+// ___________________________________//
+$app: (
+  bg: #FFF,
+  bg-green: #E3FFF9,
+  bg-pink: #FFEDED,
+  bg-yellow: #FCF5D1,
+  text-color: #5249C0,
+  light-blue: #A0ECF7,
+  turquoise: #3EF0CA,
+  pink: #FF847C,
+  yellow: #F0C746,
+  modal-close-icon-color: #FFF,
+  white: #FFF
+) !default;
+
+
+//            $States                 \\
+// ___________________________________//
+$states: (
+  default  : map-get($app, text-color),
+  disabled : #B3B3B3,
+  error    : #F13E5C,
+  focus    : lighten(map-get($app, text-color), 20%),
+  hover    : lighten(map-get($app, text-color), 20%),
+  info     : #0087C9,
+  success  : #00BB8E,
+  warning  : #FB9528,
+) !default;
+
+
+//            $Inputs                 \\
+// ___________________________________//
+$inputs: (
+  default      : map-get($states, default),
+  focus        : map-get($states, focus),
+  has-no-error : map-get($states, success),
+  has-error    : map-get($states, error),
+  has-warning  : map-get($states, warning),
+  info         : map-get($states, info),
+  is-disabled  : map-get($states, disabled),
+  is-readonly  : map-get($states, disabled),
+) !default;
+
+
+//            $Links                  \\
+// ___________________________________//
+$icons: (
+  default  : map-get($states, default),
+  disabled : map-get($states, disabled),
+  hover    : map-get($states, hover),
+) !default;
+
+
+//            $Links                  \\
+// ___________________________________//
+$links: (
+  default : map-get($states, default),
+  hover   : map-get($states, hover),
+  focus   : map-get($states, focus),
+  visited : map-get($states, visited)
+) !default;
+
+
+//            $TERMINAL               \\
+// ___________________________________//
+$git-color: rgb(249, 87, 30);
+
+$terminal: (
+  bg      : #4A579E,
+  color   : $white,
+  comment : #D4D4D4,
+  keyword : #DCA1ED,
+  value   : #48EF4A
+) !default;
+
+
+//            $SOCIAL                 \\
+// ___________________________________//
+$social : (
+  facebook    : #3B5999,
+  twitter     : #55ACEE,
+  linkedin    : #0077B5,
+  google-plus : #DD4B39,
+  pinterest   : #BD081C,
+  instagram   : #E4405F,
+  dribbble    : #EA4C89,
+  youtube     : #CD201F,
+  tumblr      : #34465D,
+  wordpress   : #21759B,
+  slack       : #3AAF85,
+  skype       : #00AFF0,
+  whatsapp    : #25D366,
+  dropbox     : #007EE5
+) !default;

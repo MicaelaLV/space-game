@@ -1,0 +1,16 @@
+
+figure {
+  margin-bottom : $base__line-height * 1px;
+
+  img {
+    margin-bottom : $base__line-height / 4;
+  }
+
+  figcaption {
+    @include x-rem(font-size, 14);
+    color       : lighten(map-get($app, text-color), 30%);
+    display     : block;
+    font-style  : italic;
+    font-weight : normal;
+  }
+}

@@ -1,0 +1,14 @@
+// sass-lint:disable indentation property-sort-order no-duplicate-properties
+
+@mixin font-face($font-name: $font-family-name, $font-extension: '', $fontfolder: $font-folder, $font-weight: normal, $font-style: normal) {
+  @font-face {
+  	font-family: '#{$font-name}-#{$font-extension}';
+      src: url('#{$fonts-path}/#{$fontfolder}/#{$font-name}-#{$font-extension}.eot');
+      src: url('#{$fonts-path}/#{$fontfolder}/#{$font-name}-#{$font-extension}.eot?#iefix') format('embedded-opentype'),
+      url('#{$fonts-path}/#{$fontfolder}/#{$font-name}-#{$font-extension}.woff') format('woff'),
+      url('#{$fonts-path}/#{$fontfolder}/#{$font-name}-#{$font-extension}.ttf') format('truetype'),
+      url('#{$fonts-path}/#{$fontfolder}/#{$font-name}-#{$font-extension}.svg##{$font-name}-#{$font-extension}') format('svg');
+  	font-weight: $font-weight;
+  	font-style: $font-style;
+  }
+}
