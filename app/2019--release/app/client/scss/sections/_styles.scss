@@ -37,8 +37,6 @@ body {
 }
 
 
-
-
 /* ------------ Message Section */
 #js-message-section{
   background-color: transparent;
@@ -191,4 +189,24 @@ p#start {
 @keyframes scroll {
 	0% { top: 100%; }
 	100% { top: -170%; }
+}
+
+/* ------------ Buttons Section */
+.interaction-buttons-container {
+  // border: 1px solid tomato;
+  bottom: 0;
+  display: flex;
+  justify-content: space-between;
+  left: 0;
+  margin: 0 70px 60px;
+  position: absolute;
+  right: 0;
+
+  button {
+    border: 0;
+  }
+
+  .interaction-icon {
+    height: 75px;
+  }
 }

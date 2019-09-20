@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="150px" height="150px" viewBox="0 0 150 150" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 58 (84663) - https://sketch.com -->
+    <title>icon--audio-off</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <polygon id="path-1" points="0.0648000026 0.867586111 46.5750019 0.867586111 46.5750019 73.0143717 0.0648000026 73.0143717"></polygon>
+    </defs>
+    <g id="Game-Version" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Game-Redesign----2019" transform="translate(-466.000000, -4653.000000)">
+            <g id="section--icons" transform="translate(271.000000, 4492.000000)">
+                <g id="icon--audio-off" transform="translate(195.000000, 161.000000)">
+                    <circle id="Oval" fill="#D0021B" cx="75" cy="75" r="75"></circle>
+                    <g id="x" transform="translate(84.000000, 55.000000)" fill="#FFFFFF">
+                        <rect id="Rectangle" transform="translate(19.500000, 20.000000) rotate(43.000000) translate(-19.500000, -20.000000) " x="15" y="-3" width="9" height="46" rx="4.5"></rect>
+                        <rect id="Rectangle-Copy-26" transform="translate(19.500000, 20.000000) scale(-1, 1) rotate(43.000000) translate(-19.500000, -20.000000) " x="15" y="-3" width="9" height="46" rx="4.5"></rect>
+                    </g>
+                    <g id="002-audio-speaker-on" transform="translate(29.000000, 38.000000)">
+                        <g id="Group-3" transform="translate(0.000000, 0.400000)">
+                            <mask id="mask-2" fill="white">
+                                <use xlink:href="#path-1"></use>
+                            </mask>
+                            <g id="Clip-2"></g>
+                            <path d="M38.8000815,1.86840007 L21.0600008,15.1534806 L4.86000019,15.1534806 C2.18484009,15.1534806 0,17.3394007 0,20.0134808 L0,53.8693221 C0,56.5434022 2.18484009,58.7293223 4.86000019,58.7293223 L21.0600008,58.7293223 L38.8000815,72.0144029 C42.0400817,74.444403 46.5750019,72.1742429 46.5750019,68.1242427 L46.5750019,5.75424023 C46.5750019,1.70424007 41.9601617,-0.561600022 38.8000815,1.86840007 Z" id="Fill-1" fill="#FFFFFF" mask="url(#mask-2)"></path>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+        <g id="001-play-button"></g>
+    </g>
+</svg>

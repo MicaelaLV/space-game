@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="150px" height="150px" viewBox="0 0 150 150" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 58 (84663) - https://sketch.com -->
+    <title>icon--play copy</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Game-Version" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Game-Redesign----2019" transform="translate(-466.000000, -4874.000000)">
+            <g id="section--icons" transform="translate(271.000000, 4492.000000)">
+                <g id="icon--play-copy" transform="translate(195.000000, 382.000000)">
+                    <circle id="Oval" fill="#F72D99" cx="75" cy="75" r="75"></circle>
+                    <path d="M106.174928,80.3746998 L66.227852,107.850799 C65.1181047,108.611194 63.8232401,109 62.5264621,109 C61.4836823,109 60.4471209,108.751317 59.4918773,108.25443 C57.3470036,107.118619 56,104.895778 56,102.476381 L56,47.5260966 C56,45.1047872 57.3470036,42.8819458 59.4918773,41.748048 C61.6372292,40.6213237 64.2288718,40.7767505 66.227852,42.151201 L106.174928,69.6258652 C107.94287,70.8420196 109,72.8539589 109,75.0002825 C109,77.1466061 107.94287,79.1585454 106.174928,80.3746998 Z" id="Path-Copy" fill="#FFFFFF"></path>
+                </g>
+            </g>
+        </g>
+        <g id="001-play-button"></g>
+    </g>
+</svg>
