@@ -66,6 +66,26 @@ p#start {
   z-index: 1;
 }
 
+#end {
+  -webkit-animation: intro 200s ease-in;
+	-moz-animation: intro 200s ease-in;
+	-ms-animation: intro 200s ease-in;
+	-o-animation: intro 200s ease-in;
+  animation: intro 200s ease-in;
+  animation-delay: 28s;
+  color: #FFF;
+  // border: 1px solid gold;
+	font-size: 40px;
+	font-weight: 400;
+	margin: 20% auto;
+	opacity: 0;
+	position: relative;
+  text-align: center;
+  top: -50%;
+	width: 90%;
+  z-index: 1;
+}
+
 @-webkit-keyframes intro {
 	0% { opacity: 1; }
 	90% { opacity: 1; }
