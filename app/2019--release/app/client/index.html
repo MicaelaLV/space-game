@@ -25,26 +25,50 @@
     <link href="https://fonts.googleapis.com/css?family=Exo+2:100,200,400,500|Kanit:100,200,400,500|Montserrat:100,200,400,500|Work+Sans:100,200,400,500" rel="stylesheet">
 
     <!-- FAVICON -->
-    
-    <!-- CSS -->
-
-
+  
   </head>
 
   <body>
     <main class="main-container">
-      <!-- GAME HOMEPAGE -------------------------------------------------------- -->
-
       <!-- STARS BACKGROUND -->
       <div id='stars'></div>
       <div id='stars2'></div>
       <div id='stars3'></div>
 
-      <!--LOGO HERE -->
+      <!-- LOGO -->
       <div class="landing-logo">
+        <!-- TODO: use srcset to change pictures on desktop -->
         <img src="./assets/img/logo--new--mobile.png" alt="alien attack logo" class="logo"/>
       </div>
+
+      <!--WELCOME MESSAGE ANIMATION-->
+      <div id="js-message-section">
+        <!-- control message star wars like -->
+        <div style="overflow:hidden; position:absolute; left:0; top:0; width:50px; height:25px;">
+          <div style="margin-top:-290px;">
+            <object width="420" height="315">
+              <param name="allowFullScreen" value="true"></param>
+              <param name="allowscriptaccess" value="always"></param>
+            </object>
+          </div>
+        </div>
+      <!--starting STAR WARS LIKE message-->
+        <p id="start">Houston, we have a problem&hellip;</p>
+      <!--star wars like message-->
+        <div id="titles">
+          <div id="titlecontent">
+            <p class="center">ALIENS ARE ATTACKING EARTH</p>
+            <p>Join the NASA pilots to protect our species against the Alien Bugs that are trying to invade our planet.</p>
+            <p>Be prepared to fight with your mouse. You'll be able to kill them by MOVING YOUR POINTER and MAKING THEM POP.</p>
+            <p>You'll be among tireless fighters improving their killing score with any bugs they meet.</p>
+            <p>And don't forget to do your best to avenge your fellow brothers fallen under the enemy army.</p>
+            <p>The rebellion crew awaits you...</p>
+            <p>MAY THE FORCE BE WITH YOU&hellip;</p>
+          </div>
+        </div>
+      </div>
     </main>
+
 
 
     <!--JQUERY-->

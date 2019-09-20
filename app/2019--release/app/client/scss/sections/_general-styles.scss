@@ -1,427 +1,427 @@
-/*  FONTS ALREADY LOADED
-font-family: 'Montserrat', sans-serif;
-font-family: 'Exo 2', sans-serif;
-font-family: 'Kanit', sans-serif;
-font-family: 'Work Sans', sans-serif;
-font-family: 'Roboto Slab', serif;
-*/
+// /*  FONTS ALREADY LOADED
+// font-family: 'Montserrat', sans-serif;
+// font-family: 'Exo 2', sans-serif;
+// font-family: 'Kanit', sans-serif;
+// font-family: 'Work Sans', sans-serif;
+// font-family: 'Roboto Slab', serif;
+// */
 
-html, body { padding: 0;margin: 0; height: 100%; overflow: hidden}
+// html, body { padding: 0;margin: 0; height: 100%; overflow: hidden}
 
-*:before *:after {
-  box-sizing: border-box;
-}
-
-
-/* ---------- Body container */
-.main-container {
-  color: white;
-  width: 100vw;
-  height: 100vh;
-}
-
-/* ----------- Logo stylings */
-.landing-logo {
-  margin: 10px auto;
-  position: absolute;
-  text-align: center;
-  width: 100%;
-}
-
-.logo {
-  margin-left: -10px;
-  max-width: 273px;
-}
-
-/* ------------ Message Section */
-#js-message-section{
-  position: absolute;
-  top: 30%;
-  height: 508px;
-  width: 100vw;
-  background-color: black;
-  font-family: 'Montserrat', sans-serif;
-
-}
-
-p#start {
-	position: relative;
-	width: 16em;
-	font-size: 200%;
-	font-weight: 400;
-	margin: 20% auto;
-	color: #4ee;
-	opacity: 0;
-	z-index: 1;
-	-webkit-animation: intro 15s ease-out;
-	-moz-animation: intro 15s ease-out;
-	-ms-animation: intro 15s ease-out;
-	-o-animation: intro 15s ease-out;
-	animation: intro 15s ease-out;
-}
-
-@-webkit-keyframes intro {
-	0% { opacity: 1; }
-	90% { opacity: 1; }
-	100% { opacity: 0; }
-}
-
-@-moz-keyframes intro {
-	0% { opacity: 1; }
-	90% { opacity: 1; }
-	100% { opacity: 0; }
-}
-
-@-ms-keyframes intro {
-	0% { opacity: 1; }
-	90% { opacity: 1; }
-	100% { opacity: 0; }
-}
-
-@-o-keyframes intro {
-	0% { opacity: 1; }
-	90% { opacity: 1; }
-	100% { opacity: 0; }
-}
-
-@keyframes intro {
-	0% { opacity: 1; }
-	90% { opacity: 1; }
-	100% { opacity: 0; }
-}
-
-/* 3D scrolling stuff part */
-#titles {
-	position: absolute;
-	width: 18em;
-	height: 50em;
-	bottom: 0;
-	left: 50%;
-	margin-left: -9em;
-	font-size: 350%;
-	text-align: justify;
-	overflow: hidden;
-	-webkit-transform-origin: 50% 100%;
-	-moz-transform-origin: 50% 100%;
-	-ms-transform-origin: 50% 100%;
-	-o-transform-origin: 50% 100%;
-	transform-origin: 50% 100%;
-	-webkit-transform: perspective(300px) rotateX(25deg);
-	-moz-transform: perspective(300px) rotateX(25deg);
-	-ms-transform: perspective(300px) rotateX(25deg);
-	-o-transform: perspective(300px) rotateX(25deg);
-	transform: perspective(300px) rotateX(25deg);
-}
-
-#titles:after {
-	position: absolute;
-	content: ' ';
-	left: 0;
-	right: 0;
-	top: 0;
-	bottom: 60%;
-	background-image: -webkit-linear-gradient(top, rgba(0,0,0,1) 0%, transparent 100%);
-	background-image: -moz-linear-gradient(top, rgba(0,0,0,1) 0%, transparent 100%);
-	background-image: -ms-linear-gradient(top, rgba(0,0,0,1) 0%, transparent 100%);
-	background-image: -o-linear-gradient(top, rgba(0,0,0,1) 0%, transparent 100%);
-	background-image: linear-gradient(top, rgba(0,0,0,1) 0%, transparent 100%);
-	pointer-events: none;
-}
-
-#titles p {
-	text-align: justify;
-	margin: 0.8em 0;
-}
-
-#titles p.center {
-	text-align: center;
-}
-
-#titles a {
-	color: #ff6;
-	text-decoration: underline;
-}
-
-#titlecontent {
-	position: absolute;
-	top: 100%;
-	-webkit-animation: scroll 100s linear 20s infinite;
-	-moz-animation: scroll 100s linear 20s infinite;
-	-ms-animation: scroll 100s linear 20s infinite;
-	-o-animation: scroll 100s linear 20s infinite;
-	animation: scroll 100s linear 20s infinite;
-}
-
-/* animation */
-@-webkit-keyframes scroll {
-	0% { top: 100%; }
-	100% { top: -170%; }
-}
-
-@-moz-keyframes scroll {
-	0% { top: 100%; }
-	100% { top: -170%; }
-}
-
-@-ms-keyframes scroll {
-	0% { top: 100%; }
-	100% { top: -170%; }
-}
-
-@-o-keyframes scroll {
-	0% { top: 100%; }
-	100% { top: -170%; }
-}
-
-@keyframes scroll {
-	0% { top: 100%; }
-	100% { top: -170%; }
-}
-
-/* ___________________________ G A M E  O N ___________________________________
-_____________________________________________________________________________*/
-
-/* TIMER - COUNTDOWN */
-
-div.js-timing {
-  display:none;
-}
-
-div.timer-container {
-  position: absolute;
-  top: 5%;
-  left: 8%;
-}
-
-.time {
-font-family: 'Montserrat', sans-serif;
-font-size: 50px;
-color:#F72D99;
-font-weight: 400;
-}
-
-div.js-countdown {
-  position: relative;
-  width: 150px;
-	height: 70px;
-	border-radius: 8px;
-	background-color: #000000;
-	border: solid 5px #46FF28;
-  font-family: 'Roboto Slab', serif;
-  color: #F5FE0D;
-  text-align: center;
-  font-size: 50px;
-}
-
-/* GAME CONTAINER */
-div#js-game-container {
-  background-image: linear-gradient(177deg, #14244d, #01132a);;
-  border: solid 3px #000;
-  border-radius: 20px;
-  position: absolute;
-  top: 300px;
-  left: 5%;
-  height: 550px;
-  width: 90vw;
-  margin-right: 20 auto;
-  display:none;
-}
-
-div#js-game-container:hover {
-  cursor: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/46992/pointer.svg), auto;
-}
-
-
-/* ----------- Bugs Controls */
-
-/* BUGS SHOWING */
-// .js-bug {
-//   height: 200px;
-//   width: 200px;
-//   position: absolute;
-//   background: url('../img/bugs/alien200.png')no-repeat center;
-//   background-size: contain;
-// }
-
-// .js-bug.small {
-//   height: 100px;
-//   width:100px;
-//   position: absolute;
-//   background: url('../img/bugs/alien100.png')no-repeat center;
-//   background-size: contain;
-// }
-
-// .js-bug.medium {
-//   height: 150px;
-//   width:150px;
-//   position: absolute;
-//   background: url('../img/bugs/alien150.png')no-repeat center;
-//   background-size: contain;
-// }
-
-// /* BUGS KILLED */
-// .js-killed {
-//   height: 200px;
-//   width: 200px;
-//   position: absolute;
-//   background: url('../img/bugs/spot150.png')no-repeat center;
-//   /*opacity: 0.7;*/
+// *:before *:after {
+//   box-sizing: border-box;
 // }
 
 
-/* ALIEN KILLS SCORE */
-div.js-kills-score{
-  display:none;
-}
-
-div.score-container {
-  position: absolute;
-  top: 5%;
-  left: 80%;
-}
-
-.alien-kills {
-  font-family: 'Montserrat', sans-serif;
-  font-size: 50px;
-  margin-right: 20px;
-  color:#F72D99;
-  font-weight: 400;
-}
-
-div.js-alien-kills{
-  position: relative;
-  width: 140px;
-  height: 70px;
-  border-radius: 8px;
-  background-color: #000000;
-  border: solid 5px #46FF28;
-  font-family: 'Roboto Slab', serif;
-  color: #F5FE0D;
-  text-align: center;
-  font-size: 50px;
-  margin-left: 12px;
-}
-
-/* GAME OVER */
-// div.js-game-over {
-//   height: 100vw;
+// /* ---------- Body container */
+// .main-container {
+//   color: white;
 //   width: 100vw;
-//   position: relative;
-//   bottom: 350px;
-//   background: url('../img/gameover.png')no-repeat center;
-//   background-color: #000;
+//   height: 100vh;
+// }
+
+// /* ----------- Logo stylings */
+// .landing-logo {
+//   margin: 10px auto;
+//   position: absolute;
+//   text-align: center;
+//   width: 100%;
+// }
+
+// .logo {
+//   margin-left: -10px;
+//   max-width: 273px;
+// }
+
+// // /* ------------ Message Section */
+// // #js-message-section{
+// //   position: absolute;
+// //   top: 30%;
+// //   height: 508px;
+// //   width: 100vw;
+// //   background-color: black;
+// //   font-family: 'Montserrat', sans-serif;
+
+// // }
+
+// // p#start {
+// // 	position: relative;
+// // 	width: 16em;
+// // 	font-size: 200%;
+// // 	font-weight: 400;
+// // 	margin: 20% auto;
+// // 	color: #4ee;
+// // 	opacity: 0;
+// // 	z-index: 1;
+// // 	-webkit-animation: intro 15s ease-out;
+// // 	-moz-animation: intro 15s ease-out;
+// // 	-ms-animation: intro 15s ease-out;
+// // 	-o-animation: intro 15s ease-out;
+// // 	animation: intro 15s ease-out;
+// // }
+
+// // @-webkit-keyframes intro {
+// // 	0% { opacity: 1; }
+// // 	90% { opacity: 1; }
+// // 	100% { opacity: 0; }
+// // }
+
+// // @-moz-keyframes intro {
+// // 	0% { opacity: 1; }
+// // 	90% { opacity: 1; }
+// // 	100% { opacity: 0; }
+// // }
+
+// // @-ms-keyframes intro {
+// // 	0% { opacity: 1; }
+// // 	90% { opacity: 1; }
+// // 	100% { opacity: 0; }
+// // }
+
+// // @-o-keyframes intro {
+// // 	0% { opacity: 1; }
+// // 	90% { opacity: 1; }
+// // 	100% { opacity: 0; }
+// // }
+
+// // @keyframes intro {
+// // 	0% { opacity: 1; }
+// // 	90% { opacity: 1; }
+// // 	100% { opacity: 0; }
+// // }
+
+// // /* 3D scrolling stuff part */
+// // #titles {
+// // 	position: absolute;
+// // 	width: 18em;
+// // 	height: 50em;
+// // 	bottom: 0;
+// // 	left: 50%;
+// // 	margin-left: -9em;
+// // 	font-size: 350%;
+// // 	text-align: justify;
+// // 	overflow: hidden;
+// // 	-webkit-transform-origin: 50% 100%;
+// // 	-moz-transform-origin: 50% 100%;
+// // 	-ms-transform-origin: 50% 100%;
+// // 	-o-transform-origin: 50% 100%;
+// // 	transform-origin: 50% 100%;
+// // 	-webkit-transform: perspective(300px) rotateX(25deg);
+// // 	-moz-transform: perspective(300px) rotateX(25deg);
+// // 	-ms-transform: perspective(300px) rotateX(25deg);
+// // 	-o-transform: perspective(300px) rotateX(25deg);
+// // 	transform: perspective(300px) rotateX(25deg);
+// // }
+
+// // #titles:after {
+// // 	position: absolute;
+// // 	content: ' ';
+// // 	left: 0;
+// // 	right: 0;
+// // 	top: 0;
+// // 	bottom: 60%;
+// // 	background-image: -webkit-linear-gradient(top, rgba(0,0,0,1) 0%, transparent 100%);
+// // 	background-image: -moz-linear-gradient(top, rgba(0,0,0,1) 0%, transparent 100%);
+// // 	background-image: -ms-linear-gradient(top, rgba(0,0,0,1) 0%, transparent 100%);
+// // 	background-image: -o-linear-gradient(top, rgba(0,0,0,1) 0%, transparent 100%);
+// // 	background-image: linear-gradient(top, rgba(0,0,0,1) 0%, transparent 100%);
+// // 	pointer-events: none;
+// // }
+
+// // #titles p {
+// // 	text-align: justify;
+// // 	margin: 0.8em 0;
+// // }
+
+// // #titles p.center {
+// // 	text-align: center;
+// // }
+
+// // #titles a {
+// // 	color: #ff6;
+// // 	text-decoration: underline;
+// // }
+
+// // #titlecontent {
+// // 	position: absolute;
+// // 	top: 100%;
+// // 	-webkit-animation: scroll 100s linear 20s infinite;
+// // 	-moz-animation: scroll 100s linear 20s infinite;
+// // 	-ms-animation: scroll 100s linear 20s infinite;
+// // 	-o-animation: scroll 100s linear 20s infinite;
+// // 	animation: scroll 100s linear 20s infinite;
+// // }
+
+// // /* animation */
+// // @-webkit-keyframes scroll {
+// // 	0% { top: 100%; }
+// // 	100% { top: -170%; }
+// // }
+
+// // @-moz-keyframes scroll {
+// // 	0% { top: 100%; }
+// // 	100% { top: -170%; }
+// // }
+
+// // @-ms-keyframes scroll {
+// // 	0% { top: 100%; }
+// // 	100% { top: -170%; }
+// // }
+
+// // @-o-keyframes scroll {
+// // 	0% { top: 100%; }
+// // 	100% { top: -170%; }
+// // }
+
+// // @keyframes scroll {
+// // 	0% { top: 100%; }
+// // 	100% { top: -170%; }
+// // }
+
+// /* ___________________________ G A M E  O N ___________________________________
+// _____________________________________________________________________________*/
+
+// /* TIMER - COUNTDOWN */
+
+// div.js-timing {
 //   display:none;
 // }
 
-// .button.play-again {
+// div.timer-container {
 //   position: absolute;
-//   top: 60%;
-//   left: 45%;
+//   top: 5%;
+//   left: 8%;
+// }
+
+// .time {
+// font-family: 'Montserrat', sans-serif;
+// font-size: 50px;
+// color:#F72D99;
+// font-weight: 400;
+// }
+
+// div.js-countdown {
+//   position: relative;
+//   width: 150px;
+// 	height: 70px;
+// 	border-radius: 8px;
+// 	background-color: #000000;
+// 	border: solid 5px #46FF28;
+//   font-family: 'Roboto Slab', serif;
+//   color: #F5FE0D;
+//   text-align: center;
+//   font-size: 50px;
+// }
+
+// /* GAME CONTAINER */
+// div#js-game-container {
+//   background-image: linear-gradient(177deg, #14244d, #01132a);;
+//   border: solid 3px #000;
+//   border-radius: 20px;
+//   position: absolute;
+//   top: 300px;
+//   left: 5%;
+//   height: 550px;
+//   width: 90vw;
+//   margin-right: 20 auto;
+//   display:none;
+// }
+
+// div#js-game-container:hover {
+//   cursor: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/46992/pointer.svg), auto;
+// }
+
+
+// /* ----------- Bugs Controls */
+
+// /* BUGS SHOWING */
+// // .js-bug {
+// //   height: 200px;
+// //   width: 200px;
+// //   position: absolute;
+// //   background: url('../img/bugs/alien200.png')no-repeat center;
+// //   background-size: contain;
+// // }
+
+// // .js-bug.small {
+// //   height: 100px;
+// //   width:100px;
+// //   position: absolute;
+// //   background: url('../img/bugs/alien100.png')no-repeat center;
+// //   background-size: contain;
+// // }
+
+// // .js-bug.medium {
+// //   height: 150px;
+// //   width:150px;
+// //   position: absolute;
+// //   background: url('../img/bugs/alien150.png')no-repeat center;
+// //   background-size: contain;
+// // }
+
+// // /* BUGS KILLED */
+// // .js-killed {
+// //   height: 200px;
+// //   width: 200px;
+// //   position: absolute;
+// //   background: url('../img/bugs/spot150.png')no-repeat center;
+// //   /*opacity: 0.7;*/
+// // }
+
+
+// /* ALIEN KILLS SCORE */
+// div.js-kills-score{
+//   display:none;
+// }
+
+// div.score-container {
+//   position: absolute;
+//   top: 5%;
+//   left: 80%;
+// }
+
+// .alien-kills {
+//   font-family: 'Montserrat', sans-serif;
+//   font-size: 50px;
+//   margin-right: 20px;
+//   color:#F72D99;
+//   font-weight: 400;
+// }
+
+// div.js-alien-kills{
+//   position: relative;
+//   width: 140px;
+//   height: 70px;
+//   border-radius: 8px;
+//   background-color: #000000;
+//   border: solid 5px #46FF28;
+//   font-family: 'Roboto Slab', serif;
+//   color: #F5FE0D;
+//   text-align: center;
+//   font-size: 50px;
+//   margin-left: 12px;
+// }
+
+// /* GAME OVER */
+// // div.js-game-over {
+// //   height: 100vw;
+// //   width: 100vw;
+// //   position: relative;
+// //   bottom: 350px;
+// //   background: url('../img/gameover.png')no-repeat center;
+// //   background-color: #000;
+// //   display:none;
+// // }
+
+// // .button.play-again {
+// //   position: absolute;
+// //   top: 60%;
+// //   left: 45%;
+// //   background-color: white;
+// //   color: black;
+// //   font-weight: bold;
+// // }
+
+
+// /*YOU WON*/
+// div.js-won {
+//   height: 100vw;
+//   width: 100vw;
+//   position: relative;
+//   bottom: 300px;
+//   background-color: #000;
+//   display:none;
+
+// }
+
+// .won-img {
+//   height: 800px;
+//   width: auto;
+//   position: relative;
+//   top: 20%;
+//   left: 10%;
+// }
+
+
+
+// .button.play-again-won {
+//   position: absolute;
+//   top: 53%;
+//   left: 51%;
 //   background-color: white;
 //   color: black;
 //   font-weight: bold;
 // }
 
+// /*--------------- start the game command */
+// #js-starting-command {
+//   position: absolute;
+//   top: 88%;
+//   height: 50px;
+//   width: 100vw;
+//   background-color: black;
+//   color: #F72D99;
+// }
 
-/*YOU WON*/
-div.js-won {
-  height: 100vw;
-  width: 100vw;
-  position: relative;
-  bottom: 300px;
-  background-color: #000;
-  display:none;
+// .starting-message {
+//   font-family: 'Montserrat', sans-serif;
+//   font-size: 25px;
+//   text-transform: uppercase;
+//   text-align: center;
+//   margin-top: 5px;
+//   letter-spacing: 1px;
+// }
 
-}
+// /* ----------- Stop the music */
+// #stop-song {
+//   position: absolute;
+//   top: 95%;
+//   right: 50%;
+//   height: 30px;
+//   width: 70vw;
+//   color: #F72D99;
+//   display: none;
+// }
 
-.won-img {
-  height: 800px;
-  width: auto;
-  position: relative;
-  top: 20%;
-  left: 10%;
-}
+// .stop-song-playing {
+//   font-family: 'Montserrat', sans-serif;
+//   font-size: 15px;
+//   text-transform: capitalize;
+//   text-align: center;
+//   margin-top: 2px;
+//   letter-spacing: 1px;
 
-
-
-.button.play-again-won {
-  position: absolute;
-  top: 53%;
-  left: 51%;
-  background-color: white;
-  color: black;
-  font-weight: bold;
-}
-
-/*--------------- start the game command */
-#js-starting-command {
-  position: absolute;
-  top: 88%;
-  height: 50px;
-  width: 100vw;
-  background-color: black;
-  color: #F72D99;
-}
-
-.starting-message {
-  font-family: 'Montserrat', sans-serif;
-  font-size: 25px;
-  text-transform: uppercase;
-  text-align: center;
-  margin-top: 5px;
-  letter-spacing: 1px;
-}
-
-/* ----------- Stop the music */
-#stop-song {
-  position: absolute;
-  top: 95%;
-  right: 50%;
-  height: 30px;
-  width: 70vw;
-  color: #F72D99;
-  display: none;
-}
-
-.stop-song-playing {
-  font-family: 'Montserrat', sans-serif;
-  font-size: 15px;
-  text-transform: capitalize;
-  text-align: center;
-  margin-top: 2px;
-  letter-spacing: 1px;
-
-}
+// }
 
 
-/* ----------- Footer controls */
+// /* ----------- Footer controls */
 
-.social-links {
-  position: absolute;
-  top: 95%;
-  right: 4%;
-  width: 100vw;
-  color: white !important;
-}
-ul.social-list-links {
-  color: #AA00FF;
-  float: right;
-  list-style-type: none;
-  text-transform: capitalize;
-  margin: 0 auto;
-}
-li.footer-show-love-left {
-  float: left;
-  margin: 0 10px;
-}
+// .social-links {
+//   position: absolute;
+//   top: 95%;
+//   right: 4%;
+//   width: 100vw;
+//   color: white !important;
+// }
+// ul.social-list-links {
+//   color: #AA00FF;
+//   float: right;
+//   list-style-type: none;
+//   text-transform: capitalize;
+//   margin: 0 auto;
+// }
+// li.footer-show-love-left {
+//   float: left;
+//   margin: 0 10px;
+// }
 
-.social-list-links {
-  display: inline;
-  text-decoration: none;
-  text-align: right;
-}
+// .social-list-links {
+//   display: inline;
+//   text-decoration: none;
+//   text-align: right;
+// }
 
-a:link {
-  text-decoration: none;
-  margin: 0 10px;
-}
+// a:link {
+//   text-decoration: none;
+//   margin: 0 10px;
+// }
