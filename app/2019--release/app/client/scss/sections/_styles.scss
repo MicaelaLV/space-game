@@ -198,7 +198,7 @@ p#start {
   display: flex;
   justify-content: space-between;
   left: 0;
-  margin: 0 70px 60px;
+  margin: 0 70px 80px;
   position: absolute;
   right: 0;
 
@@ -208,5 +208,23 @@ p#start {
 
   .interaction-icon {
     height: 75px;
+  }
+}
+
+/* ------------ Footer Section */
+footer {
+  bottom: 0;
+  left: 0;
+  margin: 10px;
+  position: absolute;
+  right: 0;
+
+  .footer__text {
+    color: #50E3C2;
+    text-align: center;
+  }
+
+  .footer__link {
+    color: #FFF;
   }
 }
