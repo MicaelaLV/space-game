@@ -76,7 +76,6 @@ html, body { padding: 0;margin: 0; height: 100%; overflow: hidden}
 }
 
 
-
 /* ---------- Body container */
 .main-container {
   color: white;
@@ -87,17 +86,14 @@ html, body { padding: 0;margin: 0; height: 100%; overflow: hidden}
 /* ----------- Logo stylings */
 .landing-logo {
   margin: 10px auto;
-  width: 100vw;
   position: absolute;
   text-align: center;
+  width: 100%;
 }
 
 .logo {
-  font-family: 'Kanit', sans-serif;
-  font-weight: 100;
-  color: #16E6CC;
-  text-transform: uppercase;
-  font-size: 50px;
+  margin-left: -10px;
+  max-width: 273px;
 }
 
 /* ------------ Message Section */
