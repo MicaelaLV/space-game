@@ -251,8 +251,8 @@ p#start {
   }
 
   @include mq($from: desktop-xs) {
-    margin: 0 auto 80px;
-    max-width: 350px;
+    margin: 0 auto 160px;
+    max-width: 300px;
   }
 }
 
@@ -267,6 +267,11 @@ footer {
   .footer__text {
     color: #50E3C2;
     text-align: center;
+
+    @include mq($from: desktop-xs) {
+      margin-right: 30px;
+      text-align: right;
+    }    
   }
 
   .footer__link {
