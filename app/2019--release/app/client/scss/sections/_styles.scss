@@ -118,10 +118,12 @@ p#start {
 
 /* 3D scrolling stuff part */
 #titles {
+  // border: 1px solid red;
 	bottom: 0;
 	font-size: 350%;
 	height: 50em;
   left: 50%;
+  max-width: 400px;
   padding: 0 34px;
 	margin-left: -3.5em;
 	overflow: hidden;
@@ -137,7 +139,17 @@ p#start {
 	-ms-transform: perspective(300px) rotateX(25deg);
 	-o-transform: perspective(300px) rotateX(25deg);
 	transform: perspective(300px) rotateX(25deg);
-	width: 100%;
+  width: 100%;
+  
+  @include mq(desktop-xs) {
+    max-width: 600px;
+    left: 41%;
+  }
+
+  @include mq(desktop-md) {
+    max-width: 650px;
+    left: 42%;
+  }
 }
 
 #titles:after {
@@ -157,12 +169,20 @@ p#start {
 
 #titles p {
 	text-align: justify;
-	margin: 0.8em 0;
+  margin: 0.8em 0;
+
+  @include mq(desktop-xs) {
+    font-size: 30px;
+  }
 }
 
 #titles p.center {
   // border: 1px solid white;
-	text-align: center;
+  text-align: center;
+  
+  @include mq(desktop-xs) {
+    font-size: 40px;
+  }
 }
 
 #titles a {
@@ -228,6 +248,11 @@ p#start {
 
   .interaction-icon {
     height: 75px;
+  }
+
+  @include mq($from: desktop-xs) {
+    margin: 0 auto 80px;
+    max-width: 350px;
   }
 }
 
