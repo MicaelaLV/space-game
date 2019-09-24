@@ -39,13 +39,19 @@ body {
 
 /* ------------ Message Section */
 #js-message-section{
-  background-color: transparent;
   // border: 2px solid tomato;
+  background-color: transparent;
   height: 202px;
   overflow: hidden;
   position: absolute;
   top: 40%;
   width: 100vw;
+
+  @include mq($from: desktop-xs) {
+    // border: 1px solid red;
+    height: 250px;
+    top: 36%;
+  }
 }
 
 p#start {
@@ -64,6 +70,18 @@ p#start {
   text-align: center;
 	width: 90%;
   z-index: 1;
+
+  @include mq($from: tablet) {
+    -webkit-animation: intro 5s ease-out;
+    -moz-animation: intro 5s ease-out;
+    -ms-animation: intro 5s ease-out;
+    -o-animation: intro 5s ease-out;
+    animation: intro 5s ease-out;
+    margin: 0;
+    position: absolute;
+    top: 40%;
+    width: 100%;
+  }
 }
 
 #end {
@@ -84,6 +102,14 @@ p#start {
   top: -50%;
 	width: 90%;
   z-index: 1;
+
+  @include mq($from: tablet) {
+    animation-delay: 35s;
+    margin: 0;
+    position: absolute;
+    top: 40%;
+    width: 100%;
+  }
 }
 
 @-webkit-keyframes intro {
@@ -251,10 +277,14 @@ p#start {
   }
 
   @include mq($from: desktop-xs) {
-    margin: 0 auto 160px;
+    margin: 0 auto 100px;
     max-width: 300px;
   }
-}
+
+
+  @include mq($from: desktop-md) {
+    margin: 0 auto 160px;
+  }}
 
 /* ------------ Footer Section */
 footer {
